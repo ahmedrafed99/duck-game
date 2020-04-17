@@ -1,10 +1,6 @@
-import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.*;
 import java.util.List;
-import java.util.function.Consumer;
-import java.util.function.Function;
 
 public class Game implements Runnable {
 
@@ -17,7 +13,7 @@ public class Game implements Runnable {
     private List<Duck> ducks;
     private List<Rock> rocks;
     private List<WaterLily> lilies;
-    Display display;
+    UI userInterface;
 
 
     public List<WaterLily> getLilies() {
@@ -36,7 +32,7 @@ public class Game implements Runnable {
         this.ducks = new ArrayList<>();
         this.rocks = new ArrayList<>();
         this.lilies = new ArrayList<>();
-        this.display = new Display(title, width, height);
+        this.userInterface = new UI(title, width, height);
 
         deployUnits();
     }
@@ -54,7 +50,7 @@ public class Game implements Runnable {
 
     public void generateRandomDucks(int amount) {
         for (int i=0; i<amount; i++) {
-            int xCoor = (int) (Math.random() * this.width + 1); //this will get us a random value between 0 and width
+            int xCoor = (int) (Math.random() * this.width  + 1); //this will get us a random value between 0 and width
             int yCoor = (int) (Math.random() * this.height + 1); //this will get us a random value between 0 and height
             Duck duck = new Duck("Duck"+i, xCoor, yCoor);
             duck.setWeight(500);
@@ -87,9 +83,11 @@ public class Game implements Runnable {
     }
 
     public void init() throws IOException, InterruptedException {
-        display.setDucks(ducks);
-        display.setRocks(rocks);
-        display.setLilies(lilies);
+        userInterface.setDucks(ducks);
+        userInterface.setRocks(rocks);
+        userInterface.setLilies(lilies);
+
+        userInterface.setVisible(true);
 
         this.scheduleDucksWeightLoss();
     }
@@ -106,8 +104,8 @@ public class Game implements Runnable {
     public void update() {
         ducks = getDucks();
         for (Duck duck: ducks){
-            int xCoor = (int) (Math.random() * this.width + 1);
-            int yCoor = (int) (Math.random() * this.height + 1);
+            int xCoor = (int) (Math.random()*((1-(-1))+1))-1;
+            int yCoor = (int) (Math.random()*((1-(-1))+1))-1;
             duck.setX(duck.getX() + xCoor);
             duck.setY(duck.getY() + yCoor);
         }
@@ -130,8 +128,6 @@ public class Game implements Runnable {
 
     @Override
     public void run() {
-
-
         try {
             init();
         } catch (IOException | InterruptedException e) {
@@ -140,10 +136,9 @@ public class Game implements Runnable {
 
         while (running) {
             try {
-                Thread.sleep(500);
-                //update();
-                //display.repaint();
-
+                Thread.sleep(10);
+                update();
+                this.userInterface.repaint();
             }
             catch (InterruptedException e) {
                 e.printStackTrace();

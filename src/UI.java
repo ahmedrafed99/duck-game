@@ -11,7 +11,7 @@ import java.nio.Buffer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Display extends JPanel {
+public class UI extends JFrame {
 
     private int width, height;
     private String title;
@@ -21,20 +21,24 @@ public class Display extends JPanel {
     BufferedImage testImg;
     ImageLoader loader = new ImageLoader();
 
-
-
-    public Display(String title, int width, int height)  {
+    public UI(String title, int width, int height)  {
         this.title = title;
         this.width = width;
         this.height = height;
-        ducks = new ArrayList<Duck>();
-        rocks = new ArrayList<Rock>();
-        lilies = new ArrayList<WaterLily>();
-        createUI();
+        this.ducks = new ArrayList<>();
+        this.rocks = new ArrayList<>();
+        this.lilies = new ArrayList<>();
 
+        this.setPreferredSize(new Dimension(width, height));
+
+        this.setTitle(title);
+        this.setResizable(true);
+        //this.setLocationRelativeTo(null); //centres the frame in the middle of the screen
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.pack();
     }
 
-
+    @Override
     public void paint(Graphics g){
         g.clearRect(0, 0, width, height);
         g.setColor(new Color(112, 222, 230)); //light blue color
@@ -80,21 +84,6 @@ public class Display extends JPanel {
 //        //ImageIcon unitImage = new ImageIcon("C:\\Users\\Ahmed\\IdeaProjects\\Duck Game\\assets\\" + filename);
 //        testImg = ImageIO.read(new URL("C:\\Users\\Ahmed\\IdeaProjects\\Duck Game\\assets\\psyduck.png"));
 //    }
-
-
-
-    private void createUI() {
-        JFrame frame = new JFrame();
-        setPreferredSize(new Dimension(width, height));
-        frame.add(this);
-        frame.setTitle(title);
-        frame.setResizable(false);
-        frame.setLocationRelativeTo(null); //centres the frame in the middle of the screen
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
-    }
-
 
     public void drawGrid(Graphics g){
         for (int i = 0; i < width; i++){

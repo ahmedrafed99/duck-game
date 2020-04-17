@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1388e47e-352d-43fe-9d50-adf52cbc629b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DuckGame/Display.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DuckGame/Display.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DuckGame/Duck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DuckGame/Duck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DuckGame/Display.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DuckGame/DuckWeightDecreaserTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DuckGame/DuckWeightDecreaserTask.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DuckGame/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DuckGame/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DuckGame/GameObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DuckGame/GameObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DuckGame/WaterLily.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DuckGame/WaterLily.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Display.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Duck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Duck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WaterLily.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WaterLily.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +107,7 @@
       <workItem from="1586518354815" duration="8268000" />
       <workItem from="1586633585385" duration="40864000" />
       <workItem from="1586977085908" duration="8393000" />
-      <workItem from="1587048926473" duration="25224000" />
+      <workItem from="1587048926473" duration="28425000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1587121399222</created>
@@ -123,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587121399223</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Attempt redraw">
+      <created>1587142196666</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587142196666</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,7 +131,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Attempt redraw" />
+    <option name="LAST_COMMIT_MESSAGE" value="Attempt redraw" />
   </component>
   <component name="WindowStateProjectService">
     <state x="394" y="110" key="#Project_Structure" timestamp="1586008098428">
@@ -146,6 +147,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="516" y="148" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/0.0.1600.860@0.0.1600.860" timestamp="1587051640919" />
+    <state x="341" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587142260747">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="341" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1587142260747" />
     <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586976059661">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -154,30 +159,30 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="555" y="133" key="#xdebugger.evaluate/0.0.1600.860@0.0.1600.860" timestamp="1587064951173" />
-    <state x="425" y="24" key="CommitChangelistDialog2" timestamp="1587121396659">
+    <state x="425" y="24" key="CommitChangelistDialog2" timestamp="1587142194153">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="425" y="24" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1587121396659" />
+    <state x="425" y="24" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1587142194153" />
     <state width="406" height="466" key="DebuggerActiveHint" timestamp="1587064747555">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="406" height="466" key="DebuggerActiveHint/0.0.1600.860@0.0.1600.860" timestamp="1587064747555" />
-    <state width="1557" height="225" key="GridCell.Tab.0.bottom" timestamp="1587141935772">
+    <state width="1557" height="225" key="GridCell.Tab.0.bottom" timestamp="1587144768879">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="225" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587141935772" />
-    <state width="1557" height="225" key="GridCell.Tab.0.center" timestamp="1587141935772">
+    <state width="1557" height="225" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587144768879" />
+    <state width="1557" height="225" key="GridCell.Tab.0.center" timestamp="1587144768879">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="225" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587141935772" />
-    <state width="1557" height="225" key="GridCell.Tab.0.left" timestamp="1587141935772">
+    <state width="1557" height="225" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587144768879" />
+    <state width="1557" height="225" key="GridCell.Tab.0.left" timestamp="1587144768879">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="225" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587141935772" />
-    <state width="1557" height="225" key="GridCell.Tab.0.right" timestamp="1587141935772">
+    <state width="1557" height="225" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587144768879" />
+    <state width="1557" height="225" key="GridCell.Tab.0.right" timestamp="1587144768879">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="225" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587141935772" />
+    <state width="1557" height="225" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587144768879" />
     <state width="1557" height="275" key="GridCell.Tab.1.bottom" timestamp="1587141504077">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -194,10 +199,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1557" height="275" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1587141504077" />
-    <state x="303" y="79" key="SettingsEditor" timestamp="1587064911086">
+    <state x="303" y="79" key="SettingsEditor" timestamp="1587142610286">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="303" y="79" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1587064911086" />
+    <state x="303" y="79" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1587142610286" />
     <state x="892" y="92" width="616" height="676" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1586985462990">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
