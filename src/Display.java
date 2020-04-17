@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.Buffer;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Display extends JPanel {
@@ -16,8 +17,6 @@ public class Display extends JPanel {
     private String title;
     private List<Duck> ducks;
     private List<Rock> rocks;
-
-
     private List<WaterLily> lilies;
     BufferedImage testImg;
     ImageLoader loader = new ImageLoader();
@@ -28,7 +27,9 @@ public class Display extends JPanel {
         this.title = title;
         this.width = width;
         this.height = height;
-
+        ducks = new ArrayList<Duck>();
+        rocks = new ArrayList<Rock>();
+        lilies = new ArrayList<WaterLily>();
         createUI();
 
     }
@@ -39,17 +40,10 @@ public class Display extends JPanel {
         g.setColor(new Color(112, 222, 230)); //light blue color
         g.fillRect(0,0, width, height);
         //drawGrid(g); //we draw the grid
-//        testImg = loadImage("psyduck.png");
-//        g.drawImage(testImg, 50, 50, 50, 35,  null);
-//        BufferedImage lily = loadImage("Lily.png");
-//        g.drawImage(lily, 0, 0, 50, 35, null);
-
-//        testImg = loader.loadImage("psyduck.png");
-//        g.drawImage(testImg, 50, 50, 50, 35, null);
 
       for (Duck duck: getDucks()) {
             BufferedImage duckImg = loader.loadImage("psyduck.png");
-            g.drawImage(duckImg, duck.getX(), duck.getY(), 50, 40,  null);
+            g.drawImage(duckImg, duck.getX(), duck.getY(), 50 , 40,  null);
       }
 
       for(Rock rock: getRocks()){

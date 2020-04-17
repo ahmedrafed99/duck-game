@@ -69,19 +69,13 @@ public class Duck extends GameObject {
 
     }
 
-    public void moveRandomly(Display display) {
-        int randX = (int) (Math.random() * (display.getWidth()));
-        int randY = (int) (Math.random() * (display.getHeight()));
-        setX(randX);
-        setY(randY);
-        loseWeight();
-    }
-
     public void loseWeight() {
-        setWeight(getWeight() - 200);
-        System.out.println( "the duck " + getName() + " lost weight by 200g, new weight is: " + getWeight() +" g");
         if (getWeight() <= minWeight){
             die();
+        }
+        else {
+            setWeight(getWeight() - 200);
+            System.out.println( "the duck " + getName() + " lost weight by 200g, new weight is: " + getWeight() +" g");
         }
     }
 
@@ -126,10 +120,6 @@ public class Duck extends GameObject {
 
     public void setColor(Color color) {
         this.color = color;
-    }
-
-    public boolean isAlive() {
-        return this.isAlive;
     }
 
     public int getHeight() {

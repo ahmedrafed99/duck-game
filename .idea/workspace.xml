@@ -2,59 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1388e47e-352d-43fe-9d50-adf52cbc629b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DuckGame.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/BluePsyduck.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Lily.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/psyduck.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/rock.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/rock1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Duck Game/META-INF/Duck Game.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Duck Game/com/intellij/uiDesigner/core/AbstractLayout.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Duck Game/com/intellij/uiDesigner/core/DimensionInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Duck Game/com/intellij/uiDesigner/core/GridConstraints.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Duck Game/com/intellij/uiDesigner/core/GridLayoutManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Duck Game/com/intellij/uiDesigner/core/HorizontalInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Duck Game/com/intellij/uiDesigner/core/LayoutState.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Duck Game/com/intellij/uiDesigner/core/Spacer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Duck Game/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Duck Game/com/intellij/uiDesigner/core/SupportCode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Duck Game/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Duck Game/com/intellij/uiDesigner/core/VerticalInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/Display.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/Duck.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/DuckWeightDecreaserTask.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/Game.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/GameObject.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/ImageLoader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/Pond.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/Rock.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/WaterLily.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/com/intellij/uiDesigner/core/AbstractLayout.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/com/intellij/uiDesigner/core/DimensionInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/com/intellij/uiDesigner/core/GridConstraints.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/com/intellij/uiDesigner/core/GridLayoutManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/com/intellij/uiDesigner/core/HorizontalInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/com/intellij/uiDesigner/core/LayoutState.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/com/intellij/uiDesigner/core/Spacer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/com/intellij/uiDesigner/core/SupportCode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/com/intellij/uiDesigner/core/VerticalInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Display.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Duck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GameObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Grid.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ImageLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pond.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Rock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WaterLily.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DuckGame/Display.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DuckGame/Display.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DuckGame/Duck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DuckGame/Duck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DuckGame/DuckWeightDecreaserTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DuckGame/DuckWeightDecreaserTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DuckGame/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DuckGame/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DuckGame/GameObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DuckGame/GameObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DuckGame/WaterLily.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DuckGame/WaterLily.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Display.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Duck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Duck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WaterLily.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WaterLily.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +54,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="133" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="207" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -153,12 +114,24 @@
       <workItem from="1586518354815" duration="8268000" />
       <workItem from="1586633585385" duration="40864000" />
       <workItem from="1586977085908" duration="8393000" />
-      <workItem from="1587048926473" duration="17285000" />
+      <workItem from="1587048926473" duration="25224000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1587121399222</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587121399223</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="394" y="110" key="#Project_Structure" timestamp="1586008098428">
@@ -181,42 +154,46 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="555" y="133" key="#xdebugger.evaluate/0.0.1600.860@0.0.1600.860" timestamp="1587064951173" />
+    <state x="425" y="24" key="CommitChangelistDialog2" timestamp="1587121396659">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="425" y="24" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1587121396659" />
     <state width="406" height="466" key="DebuggerActiveHint" timestamp="1587064747555">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="406" height="466" key="DebuggerActiveHint/0.0.1600.860@0.0.1600.860" timestamp="1587064747555" />
-    <state width="1557" height="171" key="GridCell.Tab.0.bottom" timestamp="1587121263530">
+    <state width="1557" height="225" key="GridCell.Tab.0.bottom" timestamp="1587141935772">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="171" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587121263530" />
-    <state width="1557" height="171" key="GridCell.Tab.0.center" timestamp="1587121263530">
+    <state width="1557" height="225" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587141935772" />
+    <state width="1557" height="225" key="GridCell.Tab.0.center" timestamp="1587141935772">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="171" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587121263530" />
-    <state width="1557" height="171" key="GridCell.Tab.0.left" timestamp="1587121263529">
+    <state width="1557" height="225" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587141935772" />
+    <state width="1557" height="225" key="GridCell.Tab.0.left" timestamp="1587141935772">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="171" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587121263529" />
-    <state width="1557" height="171" key="GridCell.Tab.0.right" timestamp="1587121263530">
+    <state width="1557" height="225" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587141935772" />
+    <state width="1557" height="225" key="GridCell.Tab.0.right" timestamp="1587141935772">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="171" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587121263530" />
-    <state width="1557" height="275" key="GridCell.Tab.1.bottom" timestamp="1587115389645">
+    <state width="1557" height="225" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587141935772" />
+    <state width="1557" height="275" key="GridCell.Tab.1.bottom" timestamp="1587141504077">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587115389645" />
-    <state width="1557" height="275" key="GridCell.Tab.1.center" timestamp="1587115389644">
+    <state width="1557" height="275" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587141504077" />
+    <state width="1557" height="275" key="GridCell.Tab.1.center" timestamp="1587141504077">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1587115389644" />
-    <state width="1557" height="275" key="GridCell.Tab.1.left" timestamp="1587115389644">
+    <state width="1557" height="275" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1587141504077" />
+    <state width="1557" height="275" key="GridCell.Tab.1.left" timestamp="1587141504077">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1587115389644" />
-    <state width="1557" height="275" key="GridCell.Tab.1.right" timestamp="1587115389645">
+    <state width="1557" height="275" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1587141504077" />
+    <state width="1557" height="275" key="GridCell.Tab.1.right" timestamp="1587141504077">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1587115389645" />
+    <state width="1557" height="275" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1587141504077" />
     <state x="303" y="79" key="SettingsEditor" timestamp="1587064911086">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

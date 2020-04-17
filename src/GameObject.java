@@ -42,6 +42,11 @@ public abstract class GameObject {
         this.name = name;
     }
 
+    public boolean isAlive(){
+        isAlive = true;
+        return true;
+    }
+
     public void die(){
         isAlive = false;
     }

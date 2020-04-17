@@ -17,7 +17,8 @@ public class Game implements Runnable {
     private List<Duck> ducks;
     private List<Rock> rocks;
     private List<WaterLily> lilies;
-    private Random random;
+    Display display;
+
 
     public List<WaterLily> getLilies() {
         return lilies;
@@ -35,6 +36,7 @@ public class Game implements Runnable {
         this.ducks = new ArrayList<>();
         this.rocks = new ArrayList<>();
         this.lilies = new ArrayList<>();
+        this.display = new Display(title, width, height);
 
         deployUnits();
     }
@@ -47,9 +49,7 @@ public class Game implements Runnable {
         generateRandomRocks(4);
 
         //Waterlily
-        for (int i=0; i<1; i++) {
-            this.lilies.add(new WaterLily("Lily" + i));
-        }
+        generateRandomLillies(5);
     }
 
     public void generateRandomDucks(int amount) {
@@ -57,7 +57,17 @@ public class Game implements Runnable {
             int xCoor = (int) (Math.random() * this.width + 1); //this will get us a random value between 0 and width
             int yCoor = (int) (Math.random() * this.height + 1); //this will get us a random value between 0 and height
             Duck duck = new Duck("Duck"+i, xCoor, yCoor);
+            duck.setWeight(500);
             this.ducks.add(duck);
+        }
+    }
+
+    public void generateRandomLillies(int amount){
+        for (int i=0; i<amount; i++) {
+            int xCoor = (int) (Math.random() * this.width + 1 ); //this will get us a random value between 0 and width
+            int yCoor = (int) (Math.random() * this.height + 1); //this will get us a random value between 0 and height
+            WaterLily lily = new WaterLily("lily"+i, xCoor, yCoor);
+            this.lilies.add(lily);
         }
     }
 
@@ -77,14 +87,10 @@ public class Game implements Runnable {
     }
 
     public void init() throws IOException, InterruptedException {
-        Display display = new Display(title, width, height);
         display.setDucks(ducks);
         display.setRocks(rocks);
         display.setLilies(lilies);
 
-        //Duck duck1 = new Duck("duck1");
-        //WaterLily lily1 = new WaterLily();
-        //System.out.println(duck1.getWeight());
         this.scheduleDucksWeightLoss();
     }
 
@@ -97,24 +103,34 @@ public class Game implements Runnable {
         thread.start();
     }
 
+    public void update() {
+        ducks = getDucks();
+        for (Duck duck: ducks){
+            int xCoor = (int) (Math.random() * this.width + 1);
+            int yCoor = (int) (Math.random() * this.height + 1);
+            duck.setX(duck.getX() + xCoor);
+            duck.setY(duck.getY() + yCoor);
+        }
+
+        lilies = getLilies();
+        for (WaterLily lily: lilies){
+            if (lily.isAlive()){
+                return;
+            } else {
+                generateRandomLillies(1);
+            }
+        }
+    }
+
     public synchronized void stop() throws InterruptedException {
         if (!running)
             return;
         thread.join();
     }
 
-    public void tick(){
-
-    }
-
-    public void render(){ // render means draw things to the screen basically :D
-
-
-    }
-
     @Override
     public void run() {
-        int secondsElapsed = 0;
+
 
         try {
             init();
@@ -122,16 +138,17 @@ public class Game implements Runnable {
             e.printStackTrace();
         }
 
-//        while (running) {
-//            try {
-//                Thread.sleep(1000);
-//                secondsElapsed++;
-//                System.out.println("Seconds elapsed: " + secondsElapsed);
-//            }
-//            catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//        }
+        while (running) {
+            try {
+                Thread.sleep(500);
+                //update();
+                //display.repaint();
+
+            }
+            catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public List<Duck> getDucks() {
