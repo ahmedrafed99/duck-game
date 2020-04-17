@@ -2,12 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1388e47e-352d-43fe-9d50-adf52cbc629b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/view/Scene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DuckGame/Display.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DuckGame/Duck.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DuckGame/DuckWeightDecreaserTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DuckGame/DuckWeightDecreaserTask.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DuckGame/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DuckGame/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DuckGame/GameObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DuckGame/ImageLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DuckGame/Pond.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DuckGame/Rock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DuckGame/WaterLily.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Duck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Duck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ImageLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ImageLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pond.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Rock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WaterLily.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WaterLily.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +120,7 @@
       <workItem from="1586518354815" duration="8268000" />
       <workItem from="1586633585385" duration="40864000" />
       <workItem from="1586977085908" duration="8393000" />
-      <workItem from="1587048926473" duration="28425000" />
+      <workItem from="1587048926473" duration="30260000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1587121399222</created>
@@ -123,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587142196666</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Redraw working">
+      <created>1587145396056</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1587145396056</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +152,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Attempt redraw" />
-    <option name="LAST_COMMIT_MESSAGE" value="Attempt redraw" />
+    <MESSAGE value="Redraw working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Redraw working" />
   </component>
   <component name="WindowStateProjectService">
     <state x="394" y="110" key="#Project_Structure" timestamp="1586008098428">
@@ -159,30 +180,30 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="555" y="133" key="#xdebugger.evaluate/0.0.1600.860@0.0.1600.860" timestamp="1587064951173" />
-    <state x="425" y="24" key="CommitChangelistDialog2" timestamp="1587142194153">
+    <state x="425" y="24" key="CommitChangelistDialog2" timestamp="1587147317469">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="425" y="24" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1587142194153" />
+    <state x="425" y="24" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1587147317469" />
     <state width="406" height="466" key="DebuggerActiveHint" timestamp="1587064747555">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="406" height="466" key="DebuggerActiveHint/0.0.1600.860@0.0.1600.860" timestamp="1587064747555" />
-    <state width="1557" height="225" key="GridCell.Tab.0.bottom" timestamp="1587144768879">
+    <state width="1557" height="225" key="GridCell.Tab.0.bottom" timestamp="1587147289983">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="225" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587144768879" />
-    <state width="1557" height="225" key="GridCell.Tab.0.center" timestamp="1587144768879">
+    <state width="1557" height="225" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587147289983" />
+    <state width="1557" height="225" key="GridCell.Tab.0.center" timestamp="1587147289983">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="225" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587144768879" />
-    <state width="1557" height="225" key="GridCell.Tab.0.left" timestamp="1587144768879">
+    <state width="1557" height="225" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587147289983" />
+    <state width="1557" height="225" key="GridCell.Tab.0.left" timestamp="1587147289983">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="225" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587144768879" />
-    <state width="1557" height="225" key="GridCell.Tab.0.right" timestamp="1587144768879">
+    <state width="1557" height="225" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587147289983" />
+    <state width="1557" height="225" key="GridCell.Tab.0.right" timestamp="1587147289983">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="225" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587144768879" />
+    <state width="1557" height="225" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587147289983" />
     <state width="1557" height="275" key="GridCell.Tab.1.bottom" timestamp="1587141504077">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

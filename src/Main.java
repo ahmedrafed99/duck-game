@@ -4,7 +4,7 @@ import java.awt.*;
 public class Main {
 
     public static void main(String[] args) {
-        // Create UI
+        // Create view.UI
 
         // Somehow trigger Game startùù
         Game game = new Game("duck game", 700, 700);

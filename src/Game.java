@@ -1,3 +1,9 @@
+import model.Duck;
+import model.Rock;
+import model.WaterLily;
+import view.ImageLoader;
+import view.UI;
+
 import java.io.IOException;
 import java.util.*;
 import java.util.List;
@@ -52,7 +58,7 @@ public class Game implements Runnable {
         for (int i=0; i<amount; i++) {
             int xCoor = (int) (Math.random() * this.width  + 1); //this will get us a random value between 0 and width
             int yCoor = (int) (Math.random() * this.height + 1); //this will get us a random value between 0 and height
-            Duck duck = new Duck("Duck"+i, xCoor, yCoor);
+            Duck duck = new Duck("model.Duck"+i, xCoor, yCoor);
             duck.setWeight(500);
             this.ducks.add(duck);
         }

@@ -1,4 +1,6 @@
+package model;
 
+import model.GameObject;
 
 public class Rock extends GameObject {
 

@@ -1,7 +1,6 @@
-import javax.swing.*;
+package model;
+
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.nio.Buffer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -10,8 +9,6 @@ public class Duck extends GameObject {
     private int size;
     private int weight;
     private Color color;
-    private int height;
-    private int width;
     private boolean isHeadDuck;
     private static final int maxWeight = 3000;
     private static final int  maxDuckWeight = 2000;
@@ -20,7 +17,6 @@ public class Duck extends GameObject {
     private Random random;
     private String duckImg;
     String filename;
-    private ImageLoader loader;
     Graphics g;
 
     public Duck(String name) {
@@ -37,16 +33,10 @@ public class Duck extends GameObject {
         this.weight = 500;
     }
 
-    public Duck (String name, int xCoor, int yCoor, int width, int height, Boolean isHeadDuck) {
+    public Duck (String name, int xCoor, int yCoor, Boolean isHeadDuck) {
         super(name, xCoor, yCoor);
-        this.height = height;
-        this.width = width;
         this.isHeadDuck = isHeadDuck;
     }
-
-//    public void draw (){
-//        g.drawImage(duckImg, xCoor, yCoor, width, height,  null);
-//    }
 
     public void eat(WaterLily lily) {
         setWeight(getWeight() + 150);
@@ -120,22 +110,6 @@ public class Duck extends GameObject {
 
     public void setColor(Color color) {
         this.color = color;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
-    public void setWidth(int width) {
-        this.width = width;
     }
 
     public static int getMaxWeight() {

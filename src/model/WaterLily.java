@@ -1,3 +1,6 @@
+package model;
+
+import model.GameObject;
 
 public class WaterLily extends GameObject {
 
