@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1388e47e-352d-43fe-9d50-adf52cbc629b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DuckGame.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/BluePsyduck.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Lily.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/psyduck.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/rock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/rock1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Duck Game/META-INF/Duck Game.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Duck Game/com/intellij/uiDesigner/core/AbstractLayout.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Duck Game/com/intellij/uiDesigner/core/DimensionInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Duck Game/com/intellij/uiDesigner/core/GridConstraints.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Duck Game/com/intellij/uiDesigner/core/GridLayoutManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Duck Game/com/intellij/uiDesigner/core/HorizontalInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Duck Game/com/intellij/uiDesigner/core/LayoutState.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Duck Game/com/intellij/uiDesigner/core/Spacer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Duck Game/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Duck Game/com/intellij/uiDesigner/core/SupportCode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Duck Game/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Duck Game/com/intellij/uiDesigner/core/VerticalInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/Display.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/Duck.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/DuckWeightDecreaserTask.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/Game.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/GameObject.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/ImageLoader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/Pond.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/Rock.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/WaterLily.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/com/intellij/uiDesigner/core/AbstractLayout.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/com/intellij/uiDesigner/core/DimensionInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/com/intellij/uiDesigner/core/GridConstraints.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/com/intellij/uiDesigner/core/GridLayoutManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/com/intellij/uiDesigner/core/HorizontalInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/com/intellij/uiDesigner/core/LayoutState.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/com/intellij/uiDesigner/core/Spacer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/com/intellij/uiDesigner/core/SupportCode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DuckGame/com/intellij/uiDesigner/core/VerticalInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Display.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Duck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GameObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Grid.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ImageLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pond.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Rock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WaterLily.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1a4wCF0lrhvCdtIuApxJKkQ3O2O" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="133" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="207" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ahmed\IdeaProjects\Duck Game\assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ahmed\IdeaProjects\Duck Game\assets" />
+      <recent name="C:\Users\Ahmed\IdeaProjects\Duck Game\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Game" />
+      <module name="DuckGame" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="DuckGame" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Game" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1388e47e-352d-43fe-9d50-adf52cbc629b" name="Default Changelist" comment="" />
+      <created>1586008044305</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586008044305</updated>
+      <workItem from="1586008049564" duration="17536000" />
+      <workItem from="1586350169261" duration="8064000" />
+      <workItem from="1586434489397" duration="4437000" />
+      <workItem from="1586518354815" duration="8268000" />
+      <workItem from="1586633585385" duration="40864000" />
+      <workItem from="1586977085908" duration="8393000" />
+      <workItem from="1587048926473" duration="17285000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="394" y="110" key="#Project_Structure" timestamp="1586008098428">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="394" y="110" key="#Project_Structure/0.0.1600.860@0.0.1600.860" timestamp="1586008098428" />
+    <state x="607" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1587119786992">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="607" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1587119786992" />
+    <state x="516" y="148" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog" timestamp="1587051640919">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="516" y="148" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/0.0.1600.860@0.0.1600.860" timestamp="1587051640919" />
+    <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586976059661">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1586976059661" />
+    <state x="555" y="133" key="#xdebugger.evaluate" timestamp="1587064951173">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="555" y="133" key="#xdebugger.evaluate/0.0.1600.860@0.0.1600.860" timestamp="1587064951173" />
+    <state width="406" height="466" key="DebuggerActiveHint" timestamp="1587064747555">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="406" height="466" key="DebuggerActiveHint/0.0.1600.860@0.0.1600.860" timestamp="1587064747555" />
+    <state width="1557" height="171" key="GridCell.Tab.0.bottom" timestamp="1587121263530">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="171" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587121263530" />
+    <state width="1557" height="171" key="GridCell.Tab.0.center" timestamp="1587121263530">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="171" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587121263530" />
+    <state width="1557" height="171" key="GridCell.Tab.0.left" timestamp="1587121263529">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="171" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587121263529" />
+    <state width="1557" height="171" key="GridCell.Tab.0.right" timestamp="1587121263530">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="171" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587121263530" />
+    <state width="1557" height="275" key="GridCell.Tab.1.bottom" timestamp="1587115389645">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="275" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587115389645" />
+    <state width="1557" height="275" key="GridCell.Tab.1.center" timestamp="1587115389644">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="275" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1587115389644" />
+    <state width="1557" height="275" key="GridCell.Tab.1.left" timestamp="1587115389644">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="275" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1587115389644" />
+    <state width="1557" height="275" key="GridCell.Tab.1.right" timestamp="1587115389645">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="275" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1587115389645" />
+    <state x="303" y="79" key="SettingsEditor" timestamp="1587064911086">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="303" y="79" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1587064911086" />
+    <state x="892" y="92" width="616" height="676" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1586985462990">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="892" y="92" width="616" height="676" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1600.860@0.0.1600.860" timestamp="1586985462990" />
+    <state x="498" y="261" key="com.intellij.ide.util.TipDialog" timestamp="1587048937294">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="498" y="261" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1587048937294" />
+    <state x="530" y="185" width="540" height="496" key="extract.method.dialog" timestamp="1587050699495">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="530" y="185" width="540" height="496" key="extract.method.dialog/0.0.1600.860@0.0.1600.860" timestamp="1587050699495" />
+    <state x="456" y="195" key="run.anything.popup" timestamp="1587118599721">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1587118599721" />
+    <state x="465" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1586358453008">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="465" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1586358453008" />
+  </component>
+</project>
