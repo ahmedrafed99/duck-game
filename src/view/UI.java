@@ -1,6 +1,7 @@
 package view;
 
 import model.Duck;
+import model.GameObject;
 import model.Rock;
 import model.WaterLily;
 
@@ -57,6 +58,10 @@ public class UI extends JFrame {
 
     public void setLilies(List<WaterLily> lilies) {
         this.scene.setLilies(lilies);
+    }
+
+    public void setGameObjects(List<GameObject> gameObjects) {
+        this.scene.setGameObjects(gameObjects);
     }
 
     @Override

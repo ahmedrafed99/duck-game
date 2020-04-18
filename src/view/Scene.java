@@ -1,6 +1,7 @@
 package view;
 
 import model.Duck;
+import model.GameObject;
 import model.Rock;
 import model.WaterLily;
 
@@ -17,6 +18,7 @@ public class Scene extends JPanel {
     private List<Duck> ducks;
     private List<Rock> rocks;
     private List<WaterLily> lilies;
+    private List<GameObject> gameObjects;
     ImageLoader imageLoader;
 
     public Scene() {
@@ -24,6 +26,7 @@ public class Scene extends JPanel {
         this.ducks = new ArrayList<>();
         this.rocks = new ArrayList<>();
         this.lilies = new ArrayList<>();
+        this.gameObjects = new ArrayList<>();
     }
 
     public Scene(int width, int height) {
@@ -38,19 +41,8 @@ public class Scene extends JPanel {
         g.setColor(new Color(112, 222, 230)); //light blue color
         g.fillRect(0,0, width, height);
 
-        for (Duck duck: getDucks()) {
-            BufferedImage duckImg = imageLoader.loadImage("psyduck.png");
-            g.drawImage(duckImg, duck.getX(), duck.getY(), 50 , 40,  null);
-        }
-
-        for(Rock rock: getRocks()){
-            BufferedImage rockImg = imageLoader.loadImage("rock.png");
-            g.drawImage(rockImg, rock.getX(), rock.getY(), 40, 40, null);
-        }
-
-        for(WaterLily lily: getLilies()){
-            BufferedImage lilyImg = imageLoader.loadImage("Lily.png");
-            g.drawImage(lilyImg, lily.getX(), lily.getY(), 40, 40, null);
+        for (GameObject gameObject: gameObjects) {
+            gameObject.draw(g);
         }
     }
 
@@ -84,5 +76,13 @@ public class Scene extends JPanel {
 
     public void setHeight(int height) {
         this.height = height;
+    }
+
+    public List<GameObject> getGameObjects() {
+        return gameObjects;
+    }
+
+    public void setGameObjects(List<GameObject> gameObjects) {
+        this.gameObjects = gameObjects;
     }
 }

@@ -1,9 +1,11 @@
 import model.Duck;
+import model.GameObject;
 import model.Rock;
 import model.WaterLily;
 import view.ImageLoader;
 import view.UI;
 
+import java.awt.*;
 import java.io.IOException;
 import java.util.*;
 import java.util.List;
@@ -16,9 +18,13 @@ public class Game implements Runnable {
     private Timer timer;
     private ImageLoader loader;
     private boolean running;
+    private Duck duck;
+    private WaterLily lily;
+    private Rock rock;
     private List<Duck> ducks;
     private List<Rock> rocks;
     private List<WaterLily> lilies;
+    private List<GameObject> gameObjects;
     UI userInterface;
 
 
@@ -38,10 +44,15 @@ public class Game implements Runnable {
         this.ducks = new ArrayList<>();
         this.rocks = new ArrayList<>();
         this.lilies = new ArrayList<>();
+        this.gameObjects = new ArrayList<>();
         this.userInterface = new UI(title, width, height);
 
         deployUnits();
     }
+
+//    public void checkCollisions(){
+//        Rectangle duckRect = duck.getBounds();
+//    }
 
     public void deployUnits() {
         //duck
@@ -61,6 +72,8 @@ public class Game implements Runnable {
             Duck duck = new Duck("model.Duck"+i, xCoor, yCoor);
             duck.setWeight(500);
             this.ducks.add(duck);
+            duck.setVisible(true);
+            this.gameObjects.add(duck);
         }
     }
 
@@ -70,6 +83,8 @@ public class Game implements Runnable {
             int yCoor = (int) (Math.random() * this.height + 1); //this will get us a random value between 0 and height
             WaterLily lily = new WaterLily("lily"+i, xCoor, yCoor);
             this.lilies.add(lily);
+            lily.setVisible(true);
+            this.gameObjects.add(lily);
         }
     }
 
@@ -79,6 +94,8 @@ public class Game implements Runnable {
             int yCoor = (int) (Math.random() * this.height + 1); //this will get us a random value between 0 and height
             Rock rock = new Rock("rock"+i, xCoor, yCoor);
             this.rocks.add(rock);
+            rock.setVisible(true);
+            this.gameObjects.add(rock);
         }
     }
 
@@ -89,9 +106,7 @@ public class Game implements Runnable {
     }
 
     public void init() throws IOException, InterruptedException {
-        userInterface.setDucks(ducks);
-        userInterface.setRocks(rocks);
-        userInterface.setLilies(lilies);
+        userInterface.setGameObjects(this.gameObjects);
 
         userInterface.setVisible(true);
 
@@ -110,10 +125,14 @@ public class Game implements Runnable {
     public void update() {
         ducks = getDucks();
         for (Duck duck: ducks){
-            int xCoor = (int) (Math.random()*((1-(-1))+1))-1;
-            int yCoor = (int) (Math.random()*((1-(-1))+1))-1;
-            duck.setX(duck.getX() + xCoor);
-            duck.setY(duck.getY() + yCoor);
+            if (duck.isAlive()){
+                int xCoor = (int) (Math.random()*((1-(-1))+1))-1;
+                int yCoor = (int) (Math.random()*((1-(-1))+1))-1;
+                duck.setX(duck.getX() + xCoor);
+                duck.setY(duck.getY() + yCoor);
+            } else {
+                duck.setVisible(false);
+            }
         }
 
         lilies = getLilies();

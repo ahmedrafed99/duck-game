@@ -1,6 +1,9 @@
 package model;
 
-import model.GameObject;
+import view.ImageLoader;
+
+import java.awt.*;
+import java.awt.image.BufferedImage;
 
 public class WaterLily extends GameObject {
 
@@ -16,5 +19,13 @@ public class WaterLily extends GameObject {
         super(name, x, y);
     }
 
+    @Override
+    public void draw(Graphics g) {
+        BufferedImage img = ImageLoader.load("Lily.png");
+        int scale = 17;
+        int width = img.getWidth()/scale;
+        int height = img.getHeight()/scale;
+        g.drawImage(img, getX(), getY(), width, height,  null);
+    }
 }
 

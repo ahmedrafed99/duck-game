@@ -1,6 +1,9 @@
 package model;
 
+import view.ImageLoader;
+
 import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -13,11 +16,14 @@ public class Duck extends GameObject {
     private static final int maxWeight = 3000;
     private static final int  maxDuckWeight = 2000;
     private static final int minWeight = 200;
-    private boolean isAlive = true;
     private Random random;
     private String duckImg;
-    String filename;
-    Graphics g;
+
+    public Duck() {
+        super();
+        this.size = 10;
+        this.weight = 500;
+    }
 
     public Duck(String name) {
         super(name);
@@ -27,14 +33,8 @@ public class Duck extends GameObject {
         super(name, x, y);
     }
 
-    public Duck() {
-        super();
-        this.size = 10;
-        this.weight = 500;
-    }
-
     public Duck (String name, int xCoor, int yCoor, Boolean isHeadDuck) {
-        super(name, xCoor, yCoor);
+        this(name, xCoor, yCoor);
         this.isHeadDuck = isHeadDuck;
     }
 
@@ -50,13 +50,12 @@ public class Duck extends GameObject {
     }
 
     public void promote() {
-        if (!isHeadDuck){
+        if (!isHeadDuck && isAlive()){
             isHeadDuck = true;
             setColor(Color.blue);
             setSize(getSize() * 2);
             System.out.println(getName() + " has been promoted into a head duck");
         }
-
     }
 
     public void loseWeight() {
@@ -69,8 +68,18 @@ public class Duck extends GameObject {
         }
     }
 
+    @Override
+    public void draw(Graphics g) {
+        BufferedImage img = ImageLoader.load("psyduck.png");
+        int scale = 12;
+        int width = img.getWidth()/scale;
+        int height = img.getHeight()/scale;
+        g.drawImage(img, getX(), getY(), width, height,  null);
+    }
+
+    @Override
     public void die() {
-        isAlive = false;
+        setVisible(false);
         System.out.println(getName() + " is dead");
     }
 

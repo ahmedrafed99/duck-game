@@ -1,10 +1,20 @@
 package model;
 
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.nio.Buffer;
+
 public abstract class GameObject {
     private String name;
     private int x;
     private int y;
+    private int width;
+    private int height;
     private boolean isAlive = true;
+    private boolean isVisible = false;
 
     public GameObject() {
     }
@@ -18,6 +28,12 @@ public abstract class GameObject {
         this.x = x;
         this.y = y;
     }
+
+    public Rectangle getBounds(){
+        return new Rectangle(x, y, width, height);
+    }
+
+    public abstract void draw(Graphics g);
 
     public int getX() {
         return x;
@@ -48,7 +64,12 @@ public abstract class GameObject {
         return true;
     }
 
+    public void setVisible(Boolean visible){
+        this.isVisible = visible;
+    }
+
     public void die(){
         isAlive = false;
+        setVisible(false);
     }
 }
