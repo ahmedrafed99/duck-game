@@ -12,12 +12,12 @@ public class Duck extends GameObject {
     private int size;
     private int weight;
     private Color color;
-    private boolean isHeadDuck;
+    private boolean isHeadDuck = false;
     private static final int maxWeight = 3000;
     private static final int  maxDuckWeight = 2000;
     private static final int minWeight = 200;
-    private Random random;
     private String duckImg;
+    private int scale;
 
     public Duck() {
         super();
@@ -25,35 +25,27 @@ public class Duck extends GameObject {
         this.weight = 500;
     }
 
-    public Duck(String name) {
-        super(name);
-    }
-
     public Duck(String name, int x, int y) {
         super(name, x, y);
+        setScale(12);
+        setDuckImg("psyduck.png");
     }
 
-    public Duck (String name, int xCoor, int yCoor, Boolean isHeadDuck) {
-        this(name, xCoor, yCoor);
-        this.isHeadDuck = isHeadDuck;
-    }
 
     public void eat(WaterLily lily) {
         setWeight(getWeight() + 150);
+        lily.die();
         System.out.println("duck eats and gains 150g, new weight is: " + getWeight() + " g");
         if (getWeight() >= maxDuckWeight ){
             promote();
         } else if ( getWeight() >= maxWeight){
             return;
         }
-        lily.die();
     }
 
     public void promote() {
         if (!isHeadDuck && isAlive()){
-            isHeadDuck = true;
-            setColor(Color.blue);
-            setSize(getSize() * 2);
+            setHeadDuck(true);
             System.out.println(getName() + " has been promoted into a head duck");
         }
     }
@@ -70,17 +62,24 @@ public class Duck extends GameObject {
 
     @Override
     public void draw(Graphics g) {
-        BufferedImage img = ImageLoader.load("psyduck.png");
-        int scale = 12;
+
+        BufferedImage img = ImageLoader.load(duckImg);
         int width = img.getWidth()/scale;
         int height = img.getHeight()/scale;
         g.drawImage(img, getX(), getY(), width, height,  null);
+
     }
 
-    @Override
-    public void die() {
-        setVisible(false);
-        System.out.println(getName() + " is dead");
+    public void moveRandomly(){
+        if (isAlive()){
+            int xCoor = (int) (Math.random()*((1-(-1))+1))-1;
+            int yCoor = (int) (Math.random()*((1-(-1))+1))-1;
+
+            setX(getX() + xCoor);
+            setY(getY() + yCoor);
+        } else {
+            setVisible(false);
+        }
     }
 
     public static void whistle(Duck ducks){
@@ -132,4 +131,28 @@ public class Duck extends GameObject {
     public static int getMinWeight() {
         return minWeight;
     }
+
+    public void setDuckImg(String duckImg){
+        this.duckImg = duckImg;
+    }
+
+    public String getDuckImg(){
+        return duckImg;
+    }
+
+    public void setScale(int scale){
+        this.scale = scale;
+    }
+
+    public int getScale(){
+        return scale;
+    }
+
+    public void setHeadDuck(Boolean headDuck){
+        isHeadDuck = headDuck;
+        setColor(Color.blue);
+        setScale(8);
+        setDuckImg("BluePsyduck.png");
+    }
+
 }

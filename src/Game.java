@@ -4,6 +4,7 @@ import model.Rock;
 import model.WaterLily;
 import view.ImageLoader;
 import view.UI;
+import static logic.Maths.*;
 
 import java.awt.*;
 import java.io.IOException;
@@ -16,7 +17,6 @@ public class Game implements Runnable {
     private int width, height;
     private Thread thread;
     private Timer timer;
-    private ImageLoader loader;
     private boolean running;
     private Duck duck;
     private WaterLily lily;
@@ -25,16 +25,8 @@ public class Game implements Runnable {
     private List<Rock> rocks;
     private List<WaterLily> lilies;
     private List<GameObject> gameObjects;
-    UI userInterface;
+    private UI userInterface;
 
-
-    public List<WaterLily> getLilies() {
-        return lilies;
-    }
-
-    public void setLilies(List<WaterLily> lilies) {
-        this.lilies = lilies;
-    }
 
     public Game(String title, int width, int height){
         this.title = title;
@@ -46,13 +38,20 @@ public class Game implements Runnable {
         this.lilies = new ArrayList<>();
         this.gameObjects = new ArrayList<>();
         this.userInterface = new UI(title, width, height);
+        this.duck = new Duck();
+        this.lily = new WaterLily();
+        this.rock = new Rock();
 
         deployUnits();
     }
 
-//    public void checkCollisions(){
-//        Rectangle duckRect = duck.getBounds();
-//    }
+    public void checkCollisions(){
+        Rectangle duckRect = duck.getBounds();
+        Rectangle lilyRect = lily.getBounds();
+        if (duckRect.intersects(lilyRect)){
+            duck.eat(lily);
+        }
+    }
 
     public void deployUnits() {
         //duck
@@ -63,15 +62,17 @@ public class Game implements Runnable {
 
         //Waterlily
         generateRandomLillies(5);
+
     }
 
     public void generateRandomDucks(int amount) {
         for (int i=0; i<amount; i++) {
-            int xCoor = (int) (Math.random() * this.width  + 1); //this will get us a random value between 0 and width
-            int yCoor = (int) (Math.random() * this.height + 1); //this will get us a random value between 0 and height
-            Duck duck = new Duck("model.Duck"+i, xCoor, yCoor);
+            int xCoor = generateRandomNumber(0, width - duck.getWidth());
+            int yCoor = generateRandomNumber(0, height - duck.getHeight());
+            Duck duck = new Duck("duck"+i, xCoor, yCoor);
             duck.setWeight(500);
             this.ducks.add(duck);
+            duck.setAlive(true);
             duck.setVisible(true);
             this.gameObjects.add(duck);
         }
@@ -79,10 +80,11 @@ public class Game implements Runnable {
 
     public void generateRandomLillies(int amount){
         for (int i=0; i<amount; i++) {
-            int xCoor = (int) (Math.random() * this.width + 1 ); //this will get us a random value between 0 and width
-            int yCoor = (int) (Math.random() * this.height + 1); //this will get us a random value between 0 and height
+            int xCoor = (int) (Math.random() * this.width - lily.getWidth() + 1 ); //this will get us a random value between 0 and width
+            int yCoor = (int) (Math.random() * this.height - lily.getHeight() + 1); //this will get us a random value between 0 and height
             WaterLily lily = new WaterLily("lily"+i, xCoor, yCoor);
             this.lilies.add(lily);
+            lily.setAlive(true);
             lily.setVisible(true);
             this.gameObjects.add(lily);
         }
@@ -90,8 +92,8 @@ public class Game implements Runnable {
 
     public void generateRandomRocks(int amount) {
         for (int i=0; i<amount; i++) {
-            int xCoor = (int) (Math.random() * this.width + 1 ); //this will get us a random value between 0 and width
-            int yCoor = (int) (Math.random() * this.height + 1); //this will get us a random value between 0 and height
+            int xCoor = (int) (Math.random() * this.width - rock.getWidth() + 1 ); //this will get us a random value between 0 and width
+            int yCoor = (int) (Math.random() * this.height - rock.getHeight() + 1); //this will get us a random value between 0 and height
             Rock rock = new Rock("rock"+i, xCoor, yCoor);
             this.rocks.add(rock);
             rock.setVisible(true);
@@ -106,10 +108,8 @@ public class Game implements Runnable {
     }
 
     public void init() throws IOException, InterruptedException {
-        userInterface.setGameObjects(this.gameObjects);
-
+        userInterface.getScene().setGameObjects(gameObjects);
         userInterface.setVisible(true);
-
         this.scheduleDucksWeightLoss();
     }
 
@@ -125,14 +125,7 @@ public class Game implements Runnable {
     public void update() {
         ducks = getDucks();
         for (Duck duck: ducks){
-            if (duck.isAlive()){
-                int xCoor = (int) (Math.random()*((1-(-1))+1))-1;
-                int yCoor = (int) (Math.random()*((1-(-1))+1))-1;
-                duck.setX(duck.getX() + xCoor);
-                duck.setY(duck.getY() + yCoor);
-            } else {
-                duck.setVisible(false);
-            }
+            duck.moveRandomly();
         }
 
         lilies = getLilies();
@@ -177,6 +170,14 @@ public class Game implements Runnable {
 
     public void setDucks(List<Duck> ducks) {
         this.ducks = ducks;
+    }
+
+    public List<WaterLily> getLilies() {
+        return lilies;
+    }
+
+    public void setLilies(List<WaterLily> lilies) {
+        this.lilies = lilies;
     }
 
     public List<Rock> getRocks() {

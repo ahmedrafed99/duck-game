@@ -15,6 +15,7 @@ public abstract class GameObject {
     private int height;
     private boolean isAlive = true;
     private boolean isVisible = false;
+    private BufferedImage image;
 
     public GameObject() {
     }
@@ -29,11 +30,23 @@ public abstract class GameObject {
         this.y = y;
     }
 
+    public abstract void draw(Graphics g);
+
     public Rectangle getBounds(){
         return new Rectangle(x, y, width, height);
     }
 
-    public abstract void draw(Graphics g);
+    public void die() {
+        setAlive(false);
+        setVisible(false);
+        if (!isAlive) {
+            System.out.println(getName() + " is dead");
+        }
+    }
+
+    public BufferedImage getImage(){
+        return image;
+    }
 
     public int getX() {
         return x;
@@ -51,6 +64,18 @@ public abstract class GameObject {
         this.y = y;
     }
 
+    public boolean isAlive(){
+        return isAlive;
+    }
+
+    public void setAlive(boolean alive) {
+        isAlive = alive;
+    }
+
+    public void setVisible(boolean visible){
+        this.isVisible = visible;
+    }
+
     public String getName() {
         return name;
     }
@@ -59,17 +84,21 @@ public abstract class GameObject {
         this.name = name;
     }
 
-    public boolean isAlive(){
-        isAlive = true;
-        return true;
+    public void setWidth(){
+        width = image.getWidth();
     }
 
-    public void setVisible(Boolean visible){
-        this.isVisible = visible;
+    public void setHeight(){
+        height = image.getHeight();
     }
 
-    public void die(){
-        isAlive = false;
-        setVisible(false);
+    public int getWidth(){
+        return width;
     }
+
+    public int getHeight(){
+        return height;
+    }
+
+
 }

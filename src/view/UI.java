@@ -1,18 +1,12 @@
 package view;
 
-import model.Duck;
-import model.GameObject;
-import model.Rock;
-import model.WaterLily;
-
 import javax.swing.*;
 import java.awt.*;
-import java.util.List;
 
 public class UI extends JFrame {
 
     private String title;
-    Scene scene;
+    private Scene scene;
 
     public UI(String title, int width, int height)  {
         this.title = title;
@@ -36,32 +30,8 @@ public class UI extends JFrame {
         this.title = title;
     }
 
-    public java.util.List<Duck> getDucks() {
-        return this.scene.getDucks();
-    }
-
-    public void setDucks(java.util.List<Duck> ducks) {
-        this.scene.setDucks(ducks);
-    }
-
-    public java.util.List<Rock> getRocks() {
-        return this.scene.getRocks();
-    }
-
-    public void setRocks(java.util.List<Rock> rocks) {
-        this.scene.setRocks(rocks);
-    }
-
-    public java.util.List<WaterLily> getLilies() {
-        return this.scene.getLilies();
-    }
-
-    public void setLilies(List<WaterLily> lilies) {
-        this.scene.setLilies(lilies);
-    }
-
-    public void setGameObjects(List<GameObject> gameObjects) {
-        this.scene.setGameObjects(gameObjects);
+    public Scene getScene() {
+        return scene;
     }
 
     @Override

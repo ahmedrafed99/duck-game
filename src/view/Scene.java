@@ -15,17 +15,11 @@ public class Scene extends JPanel {
 
     private int width;
     private int height;
-    private List<Duck> ducks;
-    private List<Rock> rocks;
-    private List<WaterLily> lilies;
     private List<GameObject> gameObjects;
     ImageLoader imageLoader;
 
     public Scene() {
         this.imageLoader = new ImageLoader();
-        this.ducks = new ArrayList<>();
-        this.rocks = new ArrayList<>();
-        this.lilies = new ArrayList<>();
         this.gameObjects = new ArrayList<>();
     }
 
@@ -42,32 +36,10 @@ public class Scene extends JPanel {
         g.fillRect(0,0, width, height);
 
         for (GameObject gameObject: gameObjects) {
-            gameObject.draw(g);
+            if (gameObject.isAlive()){
+                gameObject.draw(g);
+            }
         }
-    }
-
-    public List<Duck> getDucks() {
-        return ducks;
-    }
-
-    public void setDucks(List<Duck> ducks) {
-        this.ducks = ducks;
-    }
-
-    public List<Rock> getRocks() {
-        return rocks;
-    }
-
-    public void setRocks(List<Rock> rocks) {
-        this.rocks = rocks;
-    }
-
-    public List<WaterLily> getLilies() {
-        return lilies;
-    }
-
-    public void setLilies(List<WaterLily> lilies) {
-        this.lilies = lilies;
     }
 
     public void setWidth(int width) {
