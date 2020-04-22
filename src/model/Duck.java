@@ -7,6 +7,7 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import static logic.Maths.*;
 
 public class Duck extends GameObject {
     private int size;
@@ -72,11 +73,19 @@ public class Duck extends GameObject {
 
     public void moveRandomly(){
         if (isAlive()){
-            int xCoor = (int) (Math.random()*((1-(-1))+1))-1;
-            int yCoor = (int) (Math.random()*((1-(-1))+1))-1;
+            int xCoor = getRandomNumberInRange(-1, 1);
+            int yCoor = getRandomNumberInRange(-1, 1);
 
-            setX(getX() + xCoor);
-            setY(getY() + yCoor);
+            int newX = getX() + xCoor;
+            int newY = getY() + yCoor;
+
+            if (newX <= 700 - getWidth()){
+                setX(newX);
+            }
+            if (newY <= 700 - getHeight()){
+                setY(newY);
+            }
+
         } else {
             setVisible(false);
         }

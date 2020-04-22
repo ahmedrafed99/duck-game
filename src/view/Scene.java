@@ -34,7 +34,6 @@ public class Scene extends JPanel {
         g.clearRect(0, 0, width, height);
         g.setColor(new Color(112, 222, 230)); //light blue color
         g.fillRect(0,0, width, height);
-
         for (GameObject gameObject: gameObjects) {
             if (gameObject.isAlive()){
                 gameObject.draw(g);

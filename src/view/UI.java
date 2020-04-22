@@ -12,9 +12,7 @@ public class UI extends JFrame {
         this.title = title;
         this.scene = new Scene(width, height);
         this.add(this.scene);
-
         this.setPreferredSize(new Dimension(width, height));
-
         this.setTitle(title);
         this.setResizable(true);
         //this.setLocationRelativeTo(null); //centres the frame in the middle of the screen
