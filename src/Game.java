@@ -1,6 +1,5 @@
-import logic.Physics;
-import logic.Point;
-import logic.Rectangle;
+import physics.Collision;
+import physics.Rectangle;
 import model.Duck;
 import model.GameObject;
 import model.Rock;
@@ -47,7 +46,7 @@ public class Game implements Runnable {
         generateRandomRocks(4);
 
         //Waterlily
-        generateRandomLillies(4);
+        generateRandomLillies(10);
 
     }
 
@@ -114,6 +113,12 @@ public class Game implements Runnable {
         this.scheduleDucksNavigation();
     }
 
+    private void kill(GameObject gameObject) {
+        this.gameObjects.removeIf(gameObject1 ->
+            gameObject.equals(gameObject1)
+        );
+    }
+
     public synchronized void start() {
         if (running)
             return;
@@ -124,14 +129,30 @@ public class Game implements Runnable {
 
     public void update() {
 
-        for (WaterLily lily: lilies) {
-            for (Duck duck: ducks){
-                if (Physics.gameObjectsCollide(duck, lily)){
-                    System.out.println(" duck collided with lily");
-                    //duck.eat(lily);
-                }
+        List<Collision> collisions = this.detectCollisions();
+        for (Collision collision: collisions) {
+            GameObject otherObject = collision.getOtherGameObject();
+            if (otherObject instanceof WaterLily) {
+                kill(otherObject);
+                collision.getDuck().eat((WaterLily) otherObject);
+            }
+            else if (otherObject instanceof Rock) {
+                // TODO: handle collision with rock
+            }
+            else if (otherObject instanceof Duck) {
+                // TODO: handle collision with other duck
             }
         }
+
+//        for (Duck duck: ducks) {
+//            for (WaterLily lily: lilies) {
+//                if (duck.collidesWith(lily)){
+//                    System.out.println(" duck collided with lily");
+//                    duck.eat(lily);
+//                    kill(lily);
+//                }
+//            }
+//        }
 
 //        lilies = getLilies();
 //        for (WaterLily lily: lilies){
@@ -152,6 +173,23 @@ public class Game implements Runnable {
         thread.join();
     }
 
+    public List<Collision> detectCollisions() {
+        List<Collision> collisions = new ArrayList<>();
+        for (Duck duck: this.getDucks()) {
+            for (GameObject gameObject: this.gameObjects) {
+                if (gameObject.equals(duck)) {
+                    continue;
+                }
+
+                if (duck.collidesWith(gameObject)) {
+                    collisions.add(new Collision(duck, gameObject));
+                }
+            }
+        }
+
+        return collisions;
+    }
+
     @Override
     public void run() {
         try {
@@ -162,7 +200,6 @@ public class Game implements Runnable {
 
         while (running) {
             try {
-                update();
                 Thread.sleep(10);
                 update();
                 this.userInterface.repaint();

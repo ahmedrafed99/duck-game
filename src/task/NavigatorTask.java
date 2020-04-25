@@ -1,10 +1,10 @@
 package task;
 
-import logic.Physics;
-import logic.Point;
+import physics.Point;
 import model.Duck;
+import physics.Navigation;
+import physics.Rectangle;
 
-import java.awt.*;
 import java.util.List;
 import java.util.TimerTask;
 
@@ -20,7 +20,7 @@ public class NavigatorTask extends TimerTask {
         super();
         this.setDuck(duck);
         this.setDestination(destination);
-        boundaries = new Rectangle();
+        boundaries = new Rectangle(0, 0);
     }
 
     public NavigatorTask(Duck duck, Rectangle boundaries) {
@@ -54,7 +54,7 @@ public class NavigatorTask extends TimerTask {
 
     public void setDestination(Point destination) {
         this.destination = destination;
-        this.path = Physics.getPathTo(duck.getPosition(), destination);
+        this.path = Navigation.getPathTo(duck.getPosition(), destination);
         System.out.println(duck.getName() + " is going to " + destination);
     }
 

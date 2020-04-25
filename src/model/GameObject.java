@@ -1,20 +1,17 @@
 package model;
 
 import java.awt.*;
-import java.awt.geom.AffineTransform;
-import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
-import java.awt.image.ColorModel;
 
-import logic.Point;
-import logic.Rectangle;
+import physics.Point;
+import physics.Rectangle;
 import view.ImageLoader;
 
 public abstract class GameObject {
     private String name;
     private boolean isAlive = true;
     private boolean isVisible = false;
-    private logic.Point position;
+    private Point position;
     private BufferedImage image;
     private double scale;
 
@@ -126,5 +123,22 @@ public abstract class GameObject {
 
     public Rectangle getBounds() {
         return new Rectangle(getX(), getY(), getWidth(), getHeight());
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (object instanceof GameObject) {
+            GameObject gameObject = (GameObject) object;
+            return this.getName().equals(gameObject.getName());
+        }
+        return false;
+    }
+
+    public boolean collidesWith(GameObject gameObject) {
+        return getBounds().intersects(gameObject.getBounds());
+    }
+
+    public boolean isDynamic() {
+        return false;
     }
 }

@@ -1,4 +1,4 @@
-package logic;
+package physics;
 
 public class Rectangle extends java.awt.Rectangle {
 

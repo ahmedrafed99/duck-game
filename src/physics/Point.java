@@ -1,6 +1,6 @@
-package logic;
+package physics;
 
-import java.awt.*;
+import logic.Maths;
 
 public class Point extends java.awt.Point {
 

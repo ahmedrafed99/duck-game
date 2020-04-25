@@ -1,6 +1,6 @@
 package model;
 
-import logic.Point;
+import physics.Point;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,13 +19,7 @@ public class Duck extends GameObject {
 
     public void eat(WaterLily lily) {
         setWeight(getWeight() + 150);
-        lily.die();
         System.out.println("duck eats and gains 150g, new weight is: " + getWeight() + " g");
-        if (getWeight() >= maxDuckWeight ){
-            promote();
-        } else if ( getWeight() >= maxWeight){
-            return;
-        }
     }
 
     public void promote() {
@@ -67,13 +61,22 @@ public class Duck extends GameObject {
     }
 
     public void setWeight(int weight) {
-        this.weight = weight;
+        if (weight <= maxDuckWeight) {
+            this.weight = weight;
+            if (this.weight >= maxDuckWeight ){
+                promote();
+            }
+        }
     }
 
     public void setHeadDuck(Boolean headDuck){
         isHeadDuck = headDuck;
-        setScale(8);
         this.setImage("BluePsyduck.png");
+        setScale(0.1);
     }
 
+    @Override
+    public boolean isDynamic() {
+        return true;
+    }
 }

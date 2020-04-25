@@ -1,13 +1,3 @@
-import logic.Maths;
-import logic.Physics;
-import logic.Rectangle;
-import model.Duck;
-import model.WaterLily;
-
-import javax.swing.*;
-import java.awt.*;
-import static logic.Maths.*;
-
 public class Main {
 
     public static void main(String[] args) {

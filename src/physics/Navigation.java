@@ -1,15 +1,9 @@
-package logic;
-
-import model.GameObject;
+package physics;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Physics {
-
-    public static boolean gameObjectsCollide(GameObject g1, GameObject g2) {
-         return g1.getBounds().intersects(g2.getBounds());
-    }
+public class Navigation {
 
     public static List<Point> getPathTo(Point from, Point to){
         List<Point> path = new ArrayList<>();
@@ -33,10 +27,4 @@ public class Physics {
 
         return path;
     }
-
-//    public static List<Collision> checkCollisions(List<GameObject> gameObjects) {
-//        for (GameObject gameobject: gameObjects) {
-//            gameObjectsCollide();
-//        }
-//    }
 }

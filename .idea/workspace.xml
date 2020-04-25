@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1388e47e-352d-43fe-9d50-adf52cbc629b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/logic/Collision.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/physics/Navigation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DuckGame/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DuckGame/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DuckGame/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DuckGame/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Physics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Physics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Collision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/physics/Collision.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Physics.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/physics/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/physics/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Duck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Duck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/NavigatorTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task/NavigatorTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/PhysicsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/PhysicsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,12 +74,19 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="test" />
       <recent name="logic" />
+    </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="physics.Navigation" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Ahmed\IdeaProjects\Duck Game\assets" />
@@ -82,9 +94,6 @@
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="task" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Ahmed\IdeaProjects\Duck Game\assets" />
@@ -182,7 +191,7 @@
       <workItem from="1587413044690" duration="4336000" />
       <workItem from="1587489332676" duration="37865000" />
       <workItem from="1587724354626" duration="1189000" />
-      <workItem from="1587806760832" duration="25905000" />
+      <workItem from="1587806760832" duration="30692000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1587121399222</created>
@@ -268,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587827695688</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Attempt collision">
+      <created>1587834315651</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1587834315651</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,7 +297,8 @@
     <MESSAGE value="Implement get path to" />
     <MESSAGE value="Navigation working" />
     <MESSAGE value="Refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor" />
+    <MESSAGE value="Attempt collision" />
+    <option name="LAST_COMMIT_MESSAGE" value="Attempt collision" />
   </component>
   <component name="WindowStateProjectService">
     <state x="394" y="110" key="#Project_Structure" timestamp="1586008098428">
@@ -296,14 +313,18 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="530" y="206" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1600.860@0.0.1600.860" timestamp="1587822499365" />
+    <state x="529" y="213" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1587836682055">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="529" y="213" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1600.860@0.0.1600.860" timestamp="1587836682055" />
     <state x="596" y="315" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587822509111">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="596" y="315" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1600.860@0.0.1600.860" timestamp="1587822509111" />
-    <state x="516" y="148" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog" timestamp="1587051640919">
+    <state x="516" y="148" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog" timestamp="1587836683032">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="516" y="148" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/0.0.1600.860@0.0.1600.860" timestamp="1587051640919" />
+    <state x="516" y="148" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/0.0.1600.860@0.0.1600.860" timestamp="1587836683032" />
     <state x="341" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587142260747">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -316,30 +337,34 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="555" y="133" key="#xdebugger.evaluate/0.0.1600.860@0.0.1600.860" timestamp="1587809754486" />
-    <state x="425" y="24" key="CommitChangelistDialog2" timestamp="1587827693238">
+    <state x="547" y="286" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1587836600608">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="425" y="24" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1587827693238" />
+    <state x="547" y="286" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1600.860@0.0.1600.860" timestamp="1587836600608" />
+    <state x="425" y="24" key="CommitChangelistDialog2" timestamp="1587834313907">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="425" y="24" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1587834313907" />
     <state width="406" height="466" key="DebuggerActiveHint" timestamp="1587064747555">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="406" height="466" key="DebuggerActiveHint/0.0.1600.860@0.0.1600.860" timestamp="1587064747555" />
-    <state width="1557" height="244" key="GridCell.Tab.0.bottom" timestamp="1587833279678">
+    <state width="1557" height="244" key="GridCell.Tab.0.bottom" timestamp="1587838876553">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="244" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587833279678" />
-    <state width="1557" height="244" key="GridCell.Tab.0.center" timestamp="1587833279678">
+    <state width="1557" height="244" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587838876553" />
+    <state width="1557" height="244" key="GridCell.Tab.0.center" timestamp="1587838876553">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="244" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587833279678" />
-    <state width="1557" height="244" key="GridCell.Tab.0.left" timestamp="1587833279678">
+    <state width="1557" height="244" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587838876553" />
+    <state width="1557" height="244" key="GridCell.Tab.0.left" timestamp="1587838876553">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="244" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587833279678" />
-    <state width="1557" height="244" key="GridCell.Tab.0.right" timestamp="1587833279678">
+    <state width="1557" height="244" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587838876553" />
+    <state width="1557" height="244" key="GridCell.Tab.0.right" timestamp="1587838876553">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="244" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587833279678" />
+    <state width="1557" height="244" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587838876553" />
     <state width="1557" height="275" key="GridCell.Tab.1.bottom" timestamp="1587832651154">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -396,9 +421,9 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1587587441157" />
-    <state x="465" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1587812967093">
+    <state x="465" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1587838305239">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="465" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1587812967093" />
+    <state x="465" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1587838305239" />
   </component>
 </project>

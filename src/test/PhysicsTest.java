@@ -1,17 +1,11 @@
 package test;
 
-import logic.Physics;
-import logic.Point;
-import logic.Rectangle;
-import model.Duck;
-import model.GameObject;
-import model.Rock;
+import physics.Point;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.junit.jupiter.params.provider.ValueSource;
+import physics.Navigation;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
@@ -28,7 +22,7 @@ class PhysicsTest {
     @ParameterizedTest
     @MethodSource("provideDataForGetPathTo")
     void getPathTo_ShouldReturnExpectedPath(Point start, Point end, List<Point> expectedPath) {
-        List<Point> path = Physics.getPathTo(start, end);
+        List<Point> path = Navigation.getPathTo(start, end);
         assertEquals(expectedPath, path);
     }
 
