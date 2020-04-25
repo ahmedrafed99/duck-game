@@ -1,37 +1,21 @@
 package model;
 
-import view.ImageLoader;
-
-import java.awt.*;
-import java.awt.image.BufferedImage;
+import logic.Point;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
-import static logic.Maths.*;
 
 public class Duck extends GameObject {
-    private int size;
     private int weight;
-    private Color color;
     private boolean isHeadDuck = false;
-    private static final int maxWeight = 3000;
-    private static final int  maxDuckWeight = 2000;
-    private static final int minWeight = 200;
-    private String duckImg;
-    private int scale;
-
-    public Duck() {
-        super();
-        this.size = 10;
-        this.weight = 500;
-    }
+    public static final int maxWeight = 3000;
+    public static final int  maxDuckWeight = 2000;
+    public static final int minWeight = 200;
 
     public Duck(String name, int x, int y) {
         super(name, x, y);
-        setScale(12);
-        setDuckImg("psyduck.png");
+        setScale(0.08);
+        this.setImage("psyduck.png");
     }
-
 
     public void eat(WaterLily lily) {
         setWeight(getWeight() + 150);
@@ -61,34 +45,8 @@ public class Duck extends GameObject {
         }
     }
 
-    @Override
-    public void draw(Graphics g) {
-
-        BufferedImage img = ImageLoader.load(duckImg);
-        int width = img.getWidth()/scale;
-        int height = img.getHeight()/scale;
-        g.drawImage(img, getX(), getY(), width, height,  null);
-
-    }
-
-    public void moveRandomly(){
-        if (isAlive()){
-            int xCoor = getRandomNumberInRange(-1, 1);
-            int yCoor = getRandomNumberInRange(-1, 1);
-
-            int newX = getX() + xCoor;
-            int newY = getY() + yCoor;
-
-            if (newX <= 700 - getWidth()){
-                setX(newX);
-            }
-            if (newY <= 700 - getHeight()){
-                setY(newY);
-            }
-
-        } else {
-            setVisible(false);
-        }
+    public void moveByStep(Point point) {
+        this.getPosition().translate(point.x, point.y);
     }
 
     public static void whistle(Duck ducks){
@@ -104,15 +62,6 @@ public class Duck extends GameObject {
         return ducks;
     }
 
-    //Getters and setters
-    public int getSize() {
-        return size;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
-
     public int getWeight() {
         return weight;
     }
@@ -121,47 +70,10 @@ public class Duck extends GameObject {
         this.weight = weight;
     }
 
-    public Color getColor() {
-        return color;
-    }
-
-    public void setColor(Color color) {
-        this.color = color;
-    }
-
-    public static int getMaxWeight() {
-        return maxWeight;
-    }
-
-    public static int getMaxDuckWeight() {
-        return maxDuckWeight;
-    }
-
-    public static int getMinWeight() {
-        return minWeight;
-    }
-
-    public void setDuckImg(String duckImg){
-        this.duckImg = duckImg;
-    }
-
-    public String getDuckImg(){
-        return duckImg;
-    }
-
-    public void setScale(int scale){
-        this.scale = scale;
-    }
-
-    public int getScale(){
-        return scale;
-    }
-
     public void setHeadDuck(Boolean headDuck){
         isHeadDuck = headDuck;
-        setColor(Color.blue);
         setScale(8);
-        setDuckImg("BluePsyduck.png");
+        this.setImage("BluePsyduck.png");
     }
 
 }

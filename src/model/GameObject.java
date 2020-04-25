@@ -1,21 +1,20 @@
 package model;
 
-import javax.imageio.ImageIO;
-import java.awt.*;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.nio.Buffer;
+import logic.Point;
+import view.ImageLoader;
 
 public abstract class GameObject {
     private String name;
-    private int x;
-    private int y;
-    private int width;
-    private int height;
+    private Dimension dimension;
     private boolean isAlive = true;
     private boolean isVisible = false;
+    private logic.Point position;
     private BufferedImage image;
+    private double scale;
 
     public GameObject() {
     }
@@ -26,14 +25,15 @@ public abstract class GameObject {
 
     public GameObject(String name, int x, int y) {
         this(name);
-        this.x = x;
-        this.y = y;
+        this.position = new Point(x, y);
     }
 
-    public abstract void draw(Graphics g);
+    public void draw(Graphics g) {
+        g.drawImage(getImage(), getX(), getY(), (int) getWidth(), (int) getHeight(),  null);
+    }
 
-    public Rectangle getBounds(){
-        return new Rectangle(x, y, width, height);
+    public Rectangle getBounds() {
+        return new Rectangle(this.position, this.dimension);
     }
 
     public void die() {
@@ -44,24 +44,20 @@ public abstract class GameObject {
         }
     }
 
-    public BufferedImage getImage(){
-        return image;
-    }
-
     public int getX() {
-        return x;
+        return this.position.x;
     }
 
     public void setX(int x) {
-        this.x = x;
+        this.position.x = x;
     }
 
     public int getY() {
-        return y;
+        return this.position.y;
     }
 
     public void setY(int y) {
-        this.y = y;
+        this.position.y = y;
     }
 
     public boolean isAlive(){
@@ -84,21 +80,40 @@ public abstract class GameObject {
         this.name = name;
     }
 
-    public void setWidth(){
-        width = image.getWidth();
+    public void setImage(BufferedImage image) {
+        this.image = image;
     }
 
-    public void setHeight(){
-        height = image.getHeight();
+    public void setImage(String fileName) {
+        BufferedImage image = ImageLoader.load(fileName);
+        setImage(image);
     }
 
-    public int getWidth(){
-        return width;
+    public BufferedImage getImage() {
+        return image;
     }
 
-    public int getHeight(){
-        return height;
+    public double getWidth() {
+        return getImage().getWidth()*getScale();
     }
 
+    public double getHeight() {
+        return getImage().getHeight()*getScale();
+    }
 
+    public Point getPosition(){
+        return position;
+    }
+
+    public void setPosition(Point position){
+        this.position = position;
+    }
+
+    public double getScale() {
+        return scale;
+    }
+
+    public void setScale(double scale) {
+        this.scale = scale;
+    }
 }
