@@ -13,4 +13,9 @@ public class Point extends java.awt.Point {
     public Point scalarMultiplyBy(int k) {
         return new Point(this.x*k, this.y*k);
     }
+
+    public Point scalarMultiplyBy(float k) {
+        int kInt = (int) k;
+        return new Point(this.x*kInt, this.y*kInt);
+    }
 }
