@@ -1,5 +1,7 @@
 package logic;
 
+import java.awt.*;
+
 public class Point extends java.awt.Point {
 
     public Point() {
@@ -17,5 +19,16 @@ public class Point extends java.awt.Point {
     public Point scalarMultiplyBy(float k) {
         int kInt = (int) k;
         return new Point(this.x*kInt, this.y*kInt);
+    }
+
+    public static Point generateRandom(Rectangle boundaries) {
+        double x = Maths.getRandomNumberInRange(boundaries.getMinX(), boundaries.getMaxX());
+        double y = Maths.getRandomNumberInRange(boundaries.getY(), boundaries.getMaxY());
+        return new Point((int) x, (int) y);
+    }
+
+    @Override
+    public String toString() {
+        return "(" + x + ", " + y + ")";
     }
 }
