@@ -3,11 +3,11 @@ import model.Duck;
 import model.GameObject;
 import model.Rock;
 import model.WaterLily;
-import view.ImageLoader;
+import task.DuckWeightDecreaserTask;
+import task.NavigatorTask;
 import view.UI;
 import static logic.Maths.*;
 
-import java.awt.*;
 import java.io.IOException;
 import java.util.*;
 import java.util.List;
@@ -42,7 +42,7 @@ public class Game implements Runnable {
 
     public void deployUnits() {
         //duck
-        generateRandomDucks(3);
+        generateRandomDucks(1);
 
         //rock
         generateRandomRocks(4);
@@ -100,12 +100,19 @@ public class Game implements Runnable {
         this.timer.scheduleAtFixedRate(duckWeightDecreaser, 5*1000, 5*1000);
     }
 
+    private void scheduleDucksNavigation() {
+        for (Duck duck: getDucks()) {
+            NavigatorTask navigatorTask = new NavigatorTask(duck, new Point(100, 100));
+            this.timer.scheduleAtFixedRate(navigatorTask, 0, 10);
+        }
+    }
+
     public void init() throws IOException, InterruptedException {
         userInterface.getScene().setGameObjects(gameObjects);
         userInterface.setVisible(true);
         this.scheduleDucksWeightLoss();
+        this.scheduleDucksNavigation();
     }
-
 
     public synchronized void start() {
         if (running)
@@ -116,12 +123,6 @@ public class Game implements Runnable {
     }
 
     public void update() {
-        ducks = getDucks();
-
-        for (Duck duck: ducks){
-            duck.moveByStep(new Point(1,1));
-        }
-
         lilies = getLilies();
         for (WaterLily lily: lilies){
             if (lily.isAlive()){
@@ -185,21 +186,3 @@ public class Game implements Runnable {
 
 
 
-class DuckWeightDecreaserTask extends TimerTask {
-
-    private List<Duck> ducks = new ArrayList<>();
-
-    public void setDucks(List<Duck> ducks) {
-        this.ducks = ducks;
-    }
-
-    @Override
-    public void run()
-    {
-        for (Duck duck: ducks) {
-            if (duck.isAlive()) {
-                duck.loseWeight();
-            }
-        }
-    }
-}

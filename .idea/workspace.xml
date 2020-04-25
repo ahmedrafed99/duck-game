@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1388e47e-352d-43fe-9d50-adf52cbc629b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/PhysicsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/task/DuckWeightDecreaserTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/task/NavigatorTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DuckGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DuckGame.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Physics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Physics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DuckGame/DuckWeightDecreaserTask.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DuckGame/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DuckGame/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -76,6 +77,9 @@
       <recent name="C:\Users\Ahmed\IdeaProjects\Duck Game\assets" />
       <recent name="C:\Users\Ahmed\IdeaProjects\Duck Game\src" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="task" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -83,7 +87,7 @@
       <recent name="C:\Users\Ahmed\IdeaProjects\Duck Game\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PhysicsTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Game" />
       <module name="DuckGame" />
@@ -147,10 +151,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.PhysicsTest" />
         <item itemvalue="JUnit.PhysicsTest.getPathTo (1)" />
         <item itemvalue="JUnit.PhysicsTest.getPathTo" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Game" />
       </list>
     </recent_temporary>
@@ -175,7 +179,7 @@
       <workItem from="1587413044690" duration="4336000" />
       <workItem from="1587489332676" duration="37865000" />
       <workItem from="1587724354626" duration="1189000" />
-      <workItem from="1587806760832" duration="12238000" />
+      <workItem from="1587806760832" duration="16091000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1587121399222</created>
@@ -233,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587811964801</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Implement get path to">
+      <created>1587820277514</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1587820277514</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,21 +255,26 @@
     <MESSAGE value="Attempt redraw" />
     <MESSAGE value="Redraw working" />
     <MESSAGE value="Refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor" />
+    <MESSAGE value="Implement get path to" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement get path to" />
   </component>
   <component name="WindowStateProjectService">
     <state x="394" y="110" key="#Project_Structure" timestamp="1586008098428">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="394" y="110" key="#Project_Structure/0.0.1600.860@0.0.1600.860" timestamp="1586008098428" />
-    <state x="607" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1587813638982">
+    <state x="607" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1587822751912">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="607" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1587813638982" />
-    <state x="530" y="206" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1587812883864">
+    <state x="607" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1587822751912" />
+    <state x="530" y="206" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1587822499365">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="530" y="206" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1600.860@0.0.1600.860" timestamp="1587812883864" />
+    <state x="530" y="206" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1600.860@0.0.1600.860" timestamp="1587822499365" />
+    <state x="596" y="315" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587822509111">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="596" y="315" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1600.860@0.0.1600.860" timestamp="1587822509111" />
     <state x="516" y="148" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog" timestamp="1587051640919">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -275,30 +291,30 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="555" y="133" key="#xdebugger.evaluate/0.0.1600.860@0.0.1600.860" timestamp="1587809754486" />
-    <state x="425" y="24" key="CommitChangelistDialog2" timestamp="1587811961680">
+    <state x="425" y="24" key="CommitChangelistDialog2" timestamp="1587820275556">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="425" y="24" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1587811961680" />
+    <state x="425" y="24" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1587820275556" />
     <state width="406" height="466" key="DebuggerActiveHint" timestamp="1587064747555">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="406" height="466" key="DebuggerActiveHint/0.0.1600.860@0.0.1600.860" timestamp="1587064747555" />
-    <state width="1557" height="244" key="GridCell.Tab.0.bottom" timestamp="1587819648766">
+    <state width="1557" height="244" key="GridCell.Tab.0.bottom" timestamp="1587824204677">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="244" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587819648766" />
-    <state width="1557" height="244" key="GridCell.Tab.0.center" timestamp="1587819648766">
+    <state width="1557" height="244" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587824204677" />
+    <state width="1557" height="244" key="GridCell.Tab.0.center" timestamp="1587824204677">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="244" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587819648766" />
-    <state width="1557" height="244" key="GridCell.Tab.0.left" timestamp="1587819648766">
+    <state width="1557" height="244" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587824204677" />
+    <state width="1557" height="244" key="GridCell.Tab.0.left" timestamp="1587824204676">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="244" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587819648766" />
-    <state width="1557" height="244" key="GridCell.Tab.0.right" timestamp="1587819648766">
+    <state width="1557" height="244" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587824204676" />
+    <state width="1557" height="244" key="GridCell.Tab.0.right" timestamp="1587824204677">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="244" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587819648766" />
+    <state width="1557" height="244" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587824204677" />
     <state width="1557" height="275" key="GridCell.Tab.1.bottom" timestamp="1587818287142">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -315,6 +331,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1557" height="275" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1587818287141" />
+    <state x="582" y="141" key="RollbackChangesDialog" timestamp="1587820946821">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="582" y="141" key="RollbackChangesDialog/0.0.1600.860@0.0.1600.860" timestamp="1587820946821" />
     <state x="303" y="79" key="SettingsEditor" timestamp="1587813618141">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
