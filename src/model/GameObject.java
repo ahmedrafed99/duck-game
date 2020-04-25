@@ -1,15 +1,12 @@
 package model;
 
-import java.awt.Dimension;
 import java.awt.Graphics;
-import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import logic.Point;
 import view.ImageLoader;
 
 public abstract class GameObject {
     private String name;
-    private Dimension dimension;
     private boolean isAlive = true;
     private boolean isVisible = false;
     private logic.Point position;
@@ -29,11 +26,7 @@ public abstract class GameObject {
     }
 
     public void draw(Graphics g) {
-        g.drawImage(getImage(), getX(), getY(), (int) getWidth(), (int) getHeight(),  null);
-    }
-
-    public Rectangle getBounds() {
-        return new Rectangle(this.position, this.dimension);
+        g.drawImage(getImage(), (int) getX(), (int) getY(), (int) getWidth(), (int) getHeight(),  null);
     }
 
     public void die() {
@@ -44,20 +37,20 @@ public abstract class GameObject {
         }
     }
 
-    public int getX() {
-        return this.position.x;
+    public double getX() {
+        return this.position.getX();
     }
 
-    public void setX(int x) {
-        this.position.x = x;
+    public void setX(double x) {
+        this.position.x = (int) x;
     }
 
-    public int getY() {
+    public double getY() {
         return this.position.y;
     }
 
-    public void setY(int y) {
-        this.position.y = y;
+    public void setY(double y) {
+        this.position.y = (int) y;
     }
 
     public boolean isAlive(){

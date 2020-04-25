@@ -23,6 +23,11 @@ public class NavigatorTask extends TimerTask {
         boundaries = new Rectangle();
     }
 
+    public NavigatorTask(Duck duck, Rectangle boundaries) {
+        this(duck, Point.generateRandom(boundaries));
+        this.setBoundaries(boundaries);
+    }
+
     @Override
     public void run() {
         if (path.size() > 0) {

@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1388e47e-352d-43fe-9d50-adf52cbc629b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/logic/Rectangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DuckGame/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DuckGame/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Maths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Maths.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/task/NavigatorTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task/NavigatorTask.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -179,7 +179,7 @@
       <workItem from="1587413044690" duration="4336000" />
       <workItem from="1587489332676" duration="37865000" />
       <workItem from="1587724354626" duration="1189000" />
-      <workItem from="1587806760832" duration="18119000" />
+      <workItem from="1587806760832" duration="19544000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1587121399222</created>
@@ -251,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587824257790</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Navigation working">
+      <created>1587826144879</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1587826144879</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,30 +306,30 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="555" y="133" key="#xdebugger.evaluate/0.0.1600.860@0.0.1600.860" timestamp="1587809754486" />
-    <state x="425" y="24" key="CommitChangelistDialog2" timestamp="1587824256065">
+    <state x="425" y="24" key="CommitChangelistDialog2" timestamp="1587826142483">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="425" y="24" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1587824256065" />
+    <state x="425" y="24" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1587826142483" />
     <state width="406" height="466" key="DebuggerActiveHint" timestamp="1587064747555">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="406" height="466" key="DebuggerActiveHint/0.0.1600.860@0.0.1600.860" timestamp="1587064747555" />
-    <state width="1557" height="244" key="GridCell.Tab.0.bottom" timestamp="1587826048895">
+    <state width="1557" height="244" key="GridCell.Tab.0.bottom" timestamp="1587827664526">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="244" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587826048895" />
-    <state width="1557" height="244" key="GridCell.Tab.0.center" timestamp="1587826048894">
+    <state width="1557" height="244" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587827664526" />
+    <state width="1557" height="244" key="GridCell.Tab.0.center" timestamp="1587827664525">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="244" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587826048894" />
-    <state width="1557" height="244" key="GridCell.Tab.0.left" timestamp="1587826048894">
+    <state width="1557" height="244" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587827664525" />
+    <state width="1557" height="244" key="GridCell.Tab.0.left" timestamp="1587827664525">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="244" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587826048894" />
-    <state width="1557" height="244" key="GridCell.Tab.0.right" timestamp="1587826048895">
+    <state width="1557" height="244" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587827664525" />
+    <state width="1557" height="244" key="GridCell.Tab.0.right" timestamp="1587827664525">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="244" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587826048895" />
+    <state width="1557" height="244" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587827664525" />
     <state width="1557" height="275" key="GridCell.Tab.1.bottom" timestamp="1587825485812">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -371,6 +378,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="496" y="28" width="607" height="804" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1587584778553" />
+    <state x="506" y="49" key="refactoring.ChangeSignatureDialog" timestamp="1587826718895">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="506" y="49" key="refactoring.ChangeSignatureDialog/0.0.1600.860@0.0.1600.860" timestamp="1587826718895" />
     <state x="456" y="195" key="run.anything.popup" timestamp="1587587441157">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
