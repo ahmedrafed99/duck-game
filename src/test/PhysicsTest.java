@@ -2,6 +2,10 @@ package test;
 
 import logic.Physics;
 import logic.Point;
+import logic.Rectangle;
+import model.Duck;
+import model.GameObject;
+import model.Rock;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -17,7 +21,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class PhysicsTest {
 
     @org.junit.jupiter.api.Test
-    void checkCollisions() {
+    void gameObjectsCollide() {
+
     }
 
     @ParameterizedTest

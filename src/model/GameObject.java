@@ -1,8 +1,13 @@
 package model;
 
-import java.awt.Graphics;
+import java.awt.*;
+import java.awt.geom.AffineTransform;
+import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
+import java.awt.image.ColorModel;
+
 import logic.Point;
+import logic.Rectangle;
 import view.ImageLoader;
 
 public abstract class GameObject {
@@ -12,6 +17,8 @@ public abstract class GameObject {
     private logic.Point position;
     private BufferedImage image;
     private double scale;
+
+    public boolean drawBounds = true;
 
     public GameObject() {
     }
@@ -26,7 +33,14 @@ public abstract class GameObject {
     }
 
     public void draw(Graphics g) {
-        g.drawImage(getImage(), (int) getX(), (int) getY(), (int) getWidth(), (int) getHeight(),  null);
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.drawImage(getImage(), (int) getX(), (int) getY(), (int) getWidth(), (int) getHeight(),  null);
+        if (drawBounds) {
+            g2d.setColor(Color.red);
+            g2d.setStroke(new BasicStroke(2));
+            Rectangle bounds = getBounds();
+            g.drawRect(bounds.x, bounds.y, bounds.width, bounds.height);
+        }
     }
 
     public void die() {
@@ -108,5 +122,9 @@ public abstract class GameObject {
 
     public void setScale(double scale) {
         this.scale = scale;
+    }
+
+    public Rectangle getBounds() {
+        return new Rectangle(getX(), getY(), getWidth(), getHeight());
     }
 }

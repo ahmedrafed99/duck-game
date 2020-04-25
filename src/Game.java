@@ -1,3 +1,4 @@
+import logic.Physics;
 import logic.Point;
 import logic.Rectangle;
 import model.Duck;
@@ -46,7 +47,7 @@ public class Game implements Runnable {
         generateRandomRocks(4);
 
         //Waterlily
-        generateRandomLillies(5);
+        generateRandomLillies(4);
 
     }
 
@@ -122,14 +123,27 @@ public class Game implements Runnable {
     }
 
     public void update() {
-        lilies = getLilies();
-        for (WaterLily lily: lilies){
-            if (lily.isAlive()){
-                return;
-            } else {
-                generateRandomLillies(1);
+
+        for (WaterLily lily: lilies) {
+            for (Duck duck: ducks){
+                if (Physics.gameObjectsCollide(duck, lily)){
+                    System.out.println(" duck collided with lily");
+                    //duck.eat(lily);
+                }
             }
         }
+
+//        lilies = getLilies();
+//        for (WaterLily lily: lilies){
+//            if (lily.isAlive()){
+//                return;
+//            } else {
+//                generateRandomLillies(1);
+//            }
+//        }
+
+        // check for collision
+
     }
 
     public synchronized void stop() throws InterruptedException {
@@ -148,6 +162,7 @@ public class Game implements Runnable {
 
         while (running) {
             try {
+                update();
                 Thread.sleep(10);
                 update();
                 this.userInterface.repaint();

@@ -1,13 +1,14 @@
 package logic;
 
-import java.awt.Rectangle;
+import model.GameObject;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Physics {
 
-    public boolean checkCollisions(Rectangle r1, Rectangle r2) {
-         return r1.intersects(r2);
+    public static boolean gameObjectsCollide(GameObject g1, GameObject g2) {
+         return g1.getBounds().intersects(g2.getBounds());
     }
 
     public static List<Point> getPathTo(Point from, Point to){
@@ -32,4 +33,10 @@ public class Physics {
 
         return path;
     }
+
+//    public static List<Collision> checkCollisions(List<GameObject> gameObjects) {
+//        for (GameObject gameobject: gameObjects) {
+//            gameObjectsCollide();
+//        }
+//    }
 }
