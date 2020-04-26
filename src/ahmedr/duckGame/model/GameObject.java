@@ -1,11 +1,11 @@
-package model;
+package ahmedr.duckGame.model;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-import physics.Point;
-import physics.Rectangle;
-import view.ImageLoader;
+import ahmedr.duckGame.physics.Point;
+import ahmedr.duckGame.physics.Rectangle;
+import ahmedr.duckGame.view.ImageLoader;
 
 public abstract class GameObject {
     private String name;

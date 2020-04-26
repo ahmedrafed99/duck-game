@@ -1,9 +1,12 @@
-import model.*;
-import physics.Collision;
-import physics.Rectangle;
-import task.DuckWeightDecreaserTask;
-import task.NavigatorTask;
-import view.UI;
+package ahmedr.duckGame;
+
+import ahmedr.duckGame.model.*;
+import ahmedr.duckGame.physics.Collision;
+import ahmedr.duckGame.physics.Point;
+import ahmedr.duckGame.physics.Rectangle;
+import ahmedr.duckGame.task.DuckWeightDecreaserTask;
+import ahmedr.duckGame.task.NavigatorTask;
+import ahmedr.duckGame.view.UI;
 import java.io.IOException;
 import java.util.*;
 import java.util.List;
@@ -17,25 +20,27 @@ public class Game implements Runnable {
     private boolean running;
     private List<GameObject> gameObjects;
     private UI userInterface;
+    private static Game instance;
 
-    public Game(String title, int width, int height){
+    private Game(String title, int width, int height){
         this.title = title;
         this.timer = new Timer();
         this.gameObjects = new ArrayList<>();
         this.userInterface = new UI(title, width, height);
-        deployUnits();
+    }
+
+    public static Game getInstance() {
+        if (instance == null) {
+            instance = new Game("Duck game", 700, 700);
+        }
+
+        return instance;
     }
 
     public void deployUnits() {
-        //duck
         generateRandomDucks(3);
-
-        //rock
-        generateRandomRocks(4);
-
-        //Waterlily
-        generateRandomLillies(30);
-
+        generateRandomRocks(10);
+        generateRandomLillies(5);
     }
 
     public void generateRandomDucks(int amount) {
@@ -74,13 +79,14 @@ public class Game implements Runnable {
     }
 
     public void init() throws IOException, InterruptedException {
+        deployUnits();
         userInterface.getScene().setGameObjects(gameObjects);
         userInterface.setVisible(true);
         this.scheduleDucksWeightLoss();
         this.scheduleDucksNavigation();
     }
 
-    private void kill(GameObject gameObject) {
+    public void kill(GameObject gameObject) {
         this.gameObjects.removeIf(gameObject1 ->
             gameObject.equals(gameObject1)
         );
@@ -105,11 +111,22 @@ public class Game implements Runnable {
             }
             else if (otherObject instanceof Rock) {
                 // TODO: handle collision with rock
+
             }
             else if (otherObject instanceof Duck) {
                 // TODO: handle collision with other duck
             }
         }
+    }
+
+    public boolean isSlotWalkable(Rectangle slot) {
+        for (GameObject gameObject: gameObjects) {
+            if (gameObject instanceof Rock && gameObject.getBounds().intersects(slot) ) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     public synchronized void stop() throws InterruptedException {
@@ -162,6 +179,10 @@ public class Game implements Runnable {
 
     public int getHeight() {
         return userInterface.getHeight();
+    }
+
+    public void setDimensions(int width, int height) {
+        this.userInterface.setDimensions(width, height);
     }
 }
 

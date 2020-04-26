@@ -1,4 +1,4 @@
-package model;
+package ahmedr.duckGame.model;
 
 
 public class WaterLily extends GameObject {

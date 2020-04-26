@@ -1,4 +1,4 @@
-package view;
+package ahmedr.duckGame.view;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

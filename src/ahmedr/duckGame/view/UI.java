@@ -1,4 +1,4 @@
-package view;
+package ahmedr.duckGame.view;
 
 import javax.swing.*;
 import java.awt.*;
@@ -36,5 +36,12 @@ public class UI extends JFrame {
     public void repaint() {
         super.repaint();
         this.scene.repaint();
+    }
+
+    public void setDimensions(int width, int height) {
+        this.scene.setWidth(width);
+        this.scene.setHeight(height);
+        this.setPreferredSize(new Dimension(width, height));
+        this.pack();
     }
 }

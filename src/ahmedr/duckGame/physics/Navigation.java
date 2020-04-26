@@ -1,4 +1,4 @@
-package physics;
+package ahmedr.duckGame.physics;
 
 import java.util.ArrayList;
 import java.util.List;

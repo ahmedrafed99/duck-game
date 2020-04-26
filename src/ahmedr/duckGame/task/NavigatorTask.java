@@ -1,9 +1,10 @@
-package task;
+package ahmedr.duckGame.task;
 
-import physics.Point;
-import model.Duck;
-import physics.Navigation;
-import physics.Rectangle;
+import ahmedr.duckGame.Game;
+import ahmedr.duckGame.physics.Point;
+import ahmedr.duckGame.model.Duck;
+import ahmedr.duckGame.physics.Navigation;
+import ahmedr.duckGame.physics.Rectangle;
 
 import java.util.List;
 import java.util.TimerTask;
@@ -12,7 +13,6 @@ public class NavigatorTask extends TimerTask {
 
     private Duck duck;
     private Point destination;
-
     private List<Point> path;
     private Rectangle boundaries;
 
@@ -31,8 +31,14 @@ public class NavigatorTask extends TimerTask {
     @Override
     public void run() {
         if (path.size() > 0) {
-            Point nextPoint = path.remove(0);
-            duck.moveByStep(nextPoint);
+            Point nextStep = path.remove(0);
+            Rectangle nextSlot = duck.getBounds();
+            nextSlot.translate(nextStep.x, nextStep.y);
+            if (Game.getInstance().isSlotWalkable(nextSlot)) { // when it's not walkable, the first "if" statement will be reexecuted,
+                                                                 // and the step will be removed, this will repeat until the path becomes null,
+                                                                // and therefore the "else" statement will be executed and a new path will be generated.
+                duck.moveByStep(nextStep);
+            }
         }
         else {
             Point newDestination = Point.generateRandom(boundaries);

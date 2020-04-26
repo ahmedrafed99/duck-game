@@ -1,4 +1,4 @@
-package logic;
+package ahmedr.duckGame.logic;
 
 import java.util.Random;
 

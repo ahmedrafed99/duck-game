@@ -1,6 +1,6 @@
-package physics;
+package ahmedr.duckGame.physics;
 
-import logic.Maths;
+import ahmedr.duckGame.logic.Maths;
 
 public class Point extends java.awt.Point {
 
@@ -19,6 +19,10 @@ public class Point extends java.awt.Point {
     public Point scalarMultiplyBy(float k) {
         int kInt = (int) k;
         return new Point(this.x*kInt, this.y*kInt);
+    }
+
+    public Point add(Point point) {
+        return new Point(this.x + point.x, this.y + point.y);
     }
 
     public static Point generateRandom(Rectangle boundaries) {

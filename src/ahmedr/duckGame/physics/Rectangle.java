@@ -1,4 +1,4 @@
-package physics;
+package ahmedr.duckGame.physics;
 
 public class Rectangle extends java.awt.Rectangle {
 

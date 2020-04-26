@@ -1,10 +1,10 @@
-package test;
+package ahmedr.duckGame.test;
 
-import physics.Point;
+import ahmedr.duckGame.physics.Point;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import physics.Navigation;
+import ahmedr.duckGame.physics.Navigation;
 
 import java.util.Arrays;
 import java.util.List;

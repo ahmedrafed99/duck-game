@@ -1,13 +1,9 @@
-package view;
+package ahmedr.duckGame.view;
 
-import model.Duck;
-import model.GameObject;
-import model.Rock;
-import model.WaterLily;
+import ahmedr.duckGame.model.GameObject;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
 

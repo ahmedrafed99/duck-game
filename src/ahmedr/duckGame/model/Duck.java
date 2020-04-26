@@ -1,6 +1,6 @@
-package model;
+package ahmedr.duckGame.model;
 
-import physics.Point;
+import ahmedr.duckGame.physics.Point;
 import java.util.ArrayList;
 import java.util.List;
 

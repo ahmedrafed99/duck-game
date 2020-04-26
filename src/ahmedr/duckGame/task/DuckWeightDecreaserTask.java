@@ -1,6 +1,7 @@
-package task;
+package ahmedr.duckGame.task;
 
-import model.Duck;
+import ahmedr.duckGame.Game;
+import ahmedr.duckGame.model.Duck;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +21,9 @@ public class DuckWeightDecreaserTask extends TimerTask {
         for (Duck duck: ducks) {
             if (duck.isAlive()) {
                 duck.loseWeight();
+                // TODO: access game instance and kill that duck if it reaches minimum weight
+            } else {
+                Game.getInstance().kill(duck);
             }
         }
     }

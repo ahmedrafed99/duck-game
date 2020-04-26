@@ -2,13 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1388e47e-352d-43fe-9d50-adf52cbc629b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/model/CouldNotGenerateGameObjectException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/GameObjectFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DuckGame/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DuckGame/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Duck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Duck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/physics/Collision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/physics/Collision.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DuckGame/Game.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DuckGame/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ahmedr/duckGame/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ahmedr/duckGame/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Maths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ahmedr/duckGame/logic/Maths.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/CouldNotGenerateGameObjectException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ahmedr/duckGame/model/CouldNotGenerateGameObjectException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Duck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ahmedr/duckGame/model/Duck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ahmedr/duckGame/model/GameObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/GameObjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ahmedr/duckGame/model/GameObjectFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Rock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ahmedr/duckGame/model/Rock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/WaterLily.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ahmedr/duckGame/model/WaterLily.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/physics/Collision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ahmedr/duckGame/physics/Collision.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/physics/Navigation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ahmedr/duckGame/physics/Navigation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/physics/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ahmedr/duckGame/physics/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/physics/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ahmedr/duckGame/physics/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/DuckWeightDecreaserTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ahmedr/duckGame/task/DuckWeightDecreaserTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/NavigatorTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ahmedr/duckGame/task/NavigatorTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/PhysicsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ahmedr/duckGame/test/PhysicsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ImageLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ahmedr/duckGame/view/ImageLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ahmedr/duckGame/view/Scene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ahmedr/duckGame/view/UI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,14 +110,14 @@
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Game" />
+      <option name="MAIN_CLASS_NAME" value="ahmedr.duckGame.Game" />
       <module name="DuckGame" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="ahmedr.duckGame.Main" />
       <module name="DuckGame" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -111,28 +127,28 @@
       <module name="DuckGame" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="ahmedr.duckGame.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.PhysicsTest" />
+      <option name="PACKAGE_NAME" value="ahmedr.duckGame.test" />
+      <option name="MAIN_CLASS_NAME" value="ahmedr.duckGame.test.PhysicsTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PhysicsTest.getPathTo (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PhysicsTest.getPathTo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DuckGame" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="ahmedr.duckGame.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.PhysicsTest" />
-      <option name="METHOD_NAME" value="getPathTo(logic.Point,logic.Point,java.util.List)" />
+      <option name="PACKAGE_NAME" value="ahmedr.duckGame.test" />
+      <option name="MAIN_CLASS_NAME" value="ahmedr.duckGame.test.PhysicsTest" />
+      <option name="METHOD_NAME" value="getPathTo" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -142,13 +158,13 @@
       <module name="DuckGame" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="ahmedr.duckGame.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.PhysicsTest" />
-      <option name="METHOD_NAME" value="getPathTo" />
+      <option name="PACKAGE_NAME" value="ahmedr.duckGame.test" />
+      <option name="MAIN_CLASS_NAME" value="ahmedr.duckGame.test.PhysicsTest" />
+      <option name="METHOD_NAME" value="getPathTo(logic.Point,logic.Point,java.util.List)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -184,7 +200,7 @@
       <workItem from="1587413044690" duration="4336000" />
       <workItem from="1587489332676" duration="37865000" />
       <workItem from="1587724354626" duration="1189000" />
-      <workItem from="1587806760832" duration="41238000" />
+      <workItem from="1587806760832" duration="50273000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1587121399222</created>
@@ -305,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587902281358</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Refactor">
+      <created>1587908428297</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1587908428297</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,34 +340,34 @@
     <MESSAGE value="Redraw working" />
     <MESSAGE value="Implement get path to" />
     <MESSAGE value="Navigation working" />
-    <MESSAGE value="Refactor" />
     <MESSAGE value="Attempt collision" />
     <MESSAGE value="pond gif added" />
     <MESSAGE value="pond gif removed" />
     <MESSAGE value="changed duck weight configs" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed duck weight configs" />
+    <MESSAGE value="Refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor" />
   </component>
   <component name="WindowStateProjectService">
     <state x="394" y="110" key="#Project_Structure" timestamp="1586008098428">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="394" y="110" key="#Project_Structure/0.0.1600.860@0.0.1600.860" timestamp="1586008098428" />
-    <state x="607" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1587825901173">
+    <state x="607" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1587912002843">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="607" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1587825901173" />
-    <state x="530" y="206" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1587822499365">
+    <state x="607" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1587912002843" />
+    <state x="530" y="206" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1587911513482">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="530" y="206" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1600.860@0.0.1600.860" timestamp="1587822499365" />
+    <state x="530" y="206" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1600.860@0.0.1600.860" timestamp="1587911513482" />
     <state x="529" y="213" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1587836682055">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="529" y="213" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1600.860@0.0.1600.860" timestamp="1587836682055" />
-    <state x="596" y="315" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587822509111">
+    <state x="596" y="315" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587911514927">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="596" y="315" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1600.860@0.0.1600.860" timestamp="1587822509111" />
+    <state x="596" y="315" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1600.860@0.0.1600.860" timestamp="1587911514927" />
     <state x="516" y="148" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog" timestamp="1587836683032">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -357,54 +380,54 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1587588655477" />
-    <state x="555" y="133" key="#xdebugger.evaluate" timestamp="1587809754486">
+    <state x="555" y="133" key="#xdebugger.evaluate" timestamp="1587913775862">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="555" y="133" key="#xdebugger.evaluate/0.0.1600.860@0.0.1600.860" timestamp="1587809754486" />
+    <state x="555" y="133" key="#xdebugger.evaluate/0.0.1600.860@0.0.1600.860" timestamp="1587913775862" />
     <state x="547" y="286" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1587836600608">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="547" y="286" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1600.860@0.0.1600.860" timestamp="1587836600608" />
-    <state x="425" y="24" key="CommitChangelistDialog2" timestamp="1587902279297">
+    <state x="425" y="24" key="CommitChangelistDialog2" timestamp="1587908425942">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="425" y="24" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1587902279297" />
+    <state x="425" y="24" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1587908425942" />
     <state width="406" height="466" key="DebuggerActiveHint" timestamp="1587064747555">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="406" height="466" key="DebuggerActiveHint/0.0.1600.860@0.0.1600.860" timestamp="1587064747555" />
-    <state width="1557" height="244" key="GridCell.Tab.0.bottom" timestamp="1587908403139">
+    <state width="1557" height="244" key="GridCell.Tab.0.bottom" timestamp="1587917539449">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="244" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587908403139" />
-    <state width="1557" height="244" key="GridCell.Tab.0.center" timestamp="1587908403139">
+    <state width="1557" height="244" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587917539449" />
+    <state width="1557" height="244" key="GridCell.Tab.0.center" timestamp="1587917539448">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="244" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587908403139" />
-    <state width="1557" height="244" key="GridCell.Tab.0.left" timestamp="1587908403138">
+    <state width="1557" height="244" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587917539448" />
+    <state width="1557" height="244" key="GridCell.Tab.0.left" timestamp="1587917539448">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="244" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587908403138" />
-    <state width="1557" height="244" key="GridCell.Tab.0.right" timestamp="1587908403139">
+    <state width="1557" height="244" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587917539448" />
+    <state width="1557" height="244" key="GridCell.Tab.0.right" timestamp="1587917539448">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="244" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587908403139" />
-    <state width="1557" height="275" key="GridCell.Tab.1.bottom" timestamp="1587906827324">
+    <state width="1557" height="244" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587917539448" />
+    <state width="1557" height="275" key="GridCell.Tab.1.bottom" timestamp="1587915850659">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587906827324" />
-    <state width="1557" height="275" key="GridCell.Tab.1.center" timestamp="1587906827324">
+    <state width="1557" height="275" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587915850659" />
+    <state width="1557" height="275" key="GridCell.Tab.1.center" timestamp="1587915850659">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1587906827324" />
-    <state width="1557" height="275" key="GridCell.Tab.1.left" timestamp="1587906827324">
+    <state width="1557" height="275" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1587915850659" />
+    <state width="1557" height="275" key="GridCell.Tab.1.left" timestamp="1587915850659">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1587906827324" />
-    <state width="1557" height="275" key="GridCell.Tab.1.right" timestamp="1587906827324">
+    <state width="1557" height="275" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1587915850659" />
+    <state width="1557" height="275" key="GridCell.Tab.1.right" timestamp="1587915850659">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1587906827324" />
+    <state width="1557" height="275" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1587915850659" />
     <state x="582" y="141" key="RollbackChangesDialog" timestamp="1587820946821">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

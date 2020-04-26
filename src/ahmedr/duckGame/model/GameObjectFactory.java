@@ -1,11 +1,11 @@
-package model;
+package ahmedr.duckGame.model;
 
-import physics.Rectangle;
+import ahmedr.duckGame.physics.Rectangle;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
-import static logic.Maths.getRandomNumberInRange;
+import static ahmedr.duckGame.logic.Maths.getRandomNumberInRange;
 
 public class GameObjectFactory {
 
@@ -21,7 +21,7 @@ public class GameObjectFactory {
         return (Rock) GameObjectFactory.generateGameObject(Rock.class, name, boundaries);
     }
 
-    public static GameObject generateGameObject(Class<?> type, String name, Rectangle boundaries) {
+    private static GameObject generateGameObject(Class<?> type, String name, Rectangle boundaries) {
         try {
             Class<?> clazz = Class.forName(type.getName());
             Constructor<?> constructor = clazz.getConstructor(String.class, Integer.TYPE, Integer.TYPE);
