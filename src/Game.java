@@ -12,6 +12,7 @@ import static logic.Maths.*;
 import java.io.IOException;
 import java.util.*;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Game implements Runnable {
 
@@ -19,9 +20,6 @@ public class Game implements Runnable {
     private Thread thread;
     private Timer timer;
     private boolean running;
-    private List<Duck> ducks;
-    private List<Rock> rocks;
-    private List<WaterLily> lilies;
     private List<GameObject> gameObjects;
     private UI userInterface;
 
@@ -29,9 +27,6 @@ public class Game implements Runnable {
     public Game(String title, int width, int height){
         this.title = title;
         this.timer = new Timer();
-        this.ducks = new ArrayList<>();
-        this.rocks = new ArrayList<>();
-        this.lilies = new ArrayList<>();
         this.gameObjects = new ArrayList<>();
         this.userInterface = new UI(title, width, height);
 
@@ -58,8 +53,6 @@ public class Game implements Runnable {
             duck.setX(xCoor);
             duck.setY(yCoor);
             duck.setWeight(500);
-            this.ducks.add(duck);
-            duck.setAlive(true);
             duck.setVisible(true);
             this.gameObjects.add(duck);
         }
@@ -72,7 +65,6 @@ public class Game implements Runnable {
             double yCoor = getRandomNumberInRange(0, getHeight() - lily.getHeight());
             lily.setX(xCoor);
             lily.setY(yCoor);
-            this.lilies.add(lily);
             lily.setAlive(true);
             lily.setVisible(true);
             this.gameObjects.add(lily);
@@ -86,7 +78,6 @@ public class Game implements Runnable {
             double yCoor = getRandomNumberInRange(0, getHeight() - rock.getHeight());
             rock.setX(xCoor);
             rock.setY(yCoor);
-            this.rocks.add(rock);
             rock.setVisible(true);
             this.gameObjects.add(rock);
         }
@@ -94,7 +85,7 @@ public class Game implements Runnable {
 
     public void scheduleDucksWeightLoss(){
         DuckWeightDecreaserTask duckWeightDecreaser = new DuckWeightDecreaserTask();
-        duckWeightDecreaser.setDucks(this.ducks);
+        duckWeightDecreaser.setDucks(this.getDucks());
         this.timer.scheduleAtFixedRate(duckWeightDecreaser, 5*1000, 5*1000);
     }
 
@@ -128,7 +119,6 @@ public class Game implements Runnable {
     }
 
     public void update() {
-
         List<Collision> collisions = this.detectCollisions();
         for (Collision collision: collisions) {
             GameObject otherObject = collision.getOtherGameObject();
@@ -144,16 +134,6 @@ public class Game implements Runnable {
             }
         }
 
-//        for (Duck duck: ducks) {
-//            for (WaterLily lily: lilies) {
-//                if (duck.collidesWith(lily)){
-//                    System.out.println(" duck collided with lily");
-//                    duck.eat(lily);
-//                    kill(lily);
-//                }
-//            }
-//        }
-
 //        lilies = getLilies();
 //        for (WaterLily lily: lilies){
 //            if (lily.isAlive()){
@@ -162,9 +142,6 @@ public class Game implements Runnable {
 //                generateRandomLillies(1);
 //            }
 //        }
-
-        // check for collision
-
     }
 
     public synchronized void stop() throws InterruptedException {
@@ -211,27 +188,36 @@ public class Game implements Runnable {
     }
 
     public List<Duck> getDucks() {
+        List<Duck> ducks = new ArrayList<>();
+        for (GameObject gameObject: gameObjects) {
+            if (gameObject instanceof Duck) {
+                ducks.add((Duck) gameObject);
+            }
+        }
+
         return ducks;
     }
 
-    public void setDucks(List<Duck> ducks) {
-        this.ducks = ducks;
-    }
-
     public List<WaterLily> getLilies() {
-        return lilies;
-    }
+        List<WaterLily> lillies = new ArrayList<>();
+        for (GameObject gameObject: gameObjects) {
+            if (gameObject instanceof WaterLily) {
+                lillies.add((WaterLily) gameObject);
+            }
+        }
 
-    public void setLilies(List<WaterLily> lilies) {
-        this.lilies = lilies;
+        return lillies;
     }
 
     public List<Rock> getRocks() {
-        return rocks;
-    }
+        List<Rock> rocks = new ArrayList<>();
+        for (GameObject gameObject: gameObjects) {
+            if (gameObject instanceof Rock) {
+                rocks.add((Rock) gameObject);
+            }
+        }
 
-    public void setRocks(List<Rock> rocks) {
-        this.rocks = rocks;
+        return rocks;
     }
 
     public int getWidth() {
