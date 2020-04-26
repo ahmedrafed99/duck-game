@@ -41,7 +41,7 @@ public class Game implements Runnable {
         generateRandomRocks(4);
 
         //Waterlily
-        generateRandomLillies(10);
+        generateRandomLillies(30);
 
     }
 

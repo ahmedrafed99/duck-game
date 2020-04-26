@@ -8,7 +8,7 @@ public class Duck extends GameObject {
     private int weight;
     private boolean isHeadDuck = false;
     public static final int maxWeight = 3000;
-    public static final int  maxDuckWeight = 2000;
+    public static final int  maxDuckWeight = 1000;
     public static final int minWeight = 200;
 
     public Duck(String name, int x, int y) {
@@ -34,7 +34,7 @@ public class Duck extends GameObject {
             die();
         }
         else {
-            setWeight(getWeight() - 200);
+            setWeight(getWeight() - 100);
             System.out.println( "the duck " + getName() + " lost weight by 200g, new weight is: " + getWeight() +" g");
         }
     }
