@@ -35,8 +35,7 @@ public class Scene extends JPanel {
         g.clearRect(0, 0, width, height);
         g.setColor(new Color(112, 222, 230)); //light blue color
         g.fillRect(0,0, width, height);
-        Image waterImage = new ImageIcon("C:\\Users\\Ahmed\\IdeaProjects\\DuckGame\\assets\\pond.gif").getImage();
-        g.drawImage(waterImage,0,0,900,700,null);
+
 
         for (GameObject gameObject: gameObjects) {
             if (gameObject.isAlive()){
