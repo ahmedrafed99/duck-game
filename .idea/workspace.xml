@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1388e47e-352d-43fe-9d50-adf52cbc629b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/model/CouldNotGenerateGameObjectException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/GameObjectFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DuckGame/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DuckGame/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Duck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Duck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/physics/Collision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/physics/Collision.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +184,7 @@
       <workItem from="1587413044690" duration="4336000" />
       <workItem from="1587489332676" duration="37865000" />
       <workItem from="1587724354626" duration="1189000" />
-      <workItem from="1587806760832" duration="35053000" />
+      <workItem from="1587806760832" duration="41238000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1587121399222</created>
@@ -295,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587901975798</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="changed duck weight configs">
+      <created>1587902281358</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1587902281358</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +321,8 @@
     <MESSAGE value="Attempt collision" />
     <MESSAGE value="pond gif added" />
     <MESSAGE value="pond gif removed" />
-    <option name="LAST_COMMIT_MESSAGE" value="pond gif removed" />
+    <MESSAGE value="changed duck weight configs" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed duck weight configs" />
   </component>
   <component name="WindowStateProjectService">
     <state x="394" y="110" key="#Project_Structure" timestamp="1586008098428">
@@ -354,46 +365,46 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="547" y="286" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1600.860@0.0.1600.860" timestamp="1587836600608" />
-    <state x="425" y="24" key="CommitChangelistDialog2" timestamp="1587901973557">
+    <state x="425" y="24" key="CommitChangelistDialog2" timestamp="1587902279297">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="425" y="24" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1587901973557" />
+    <state x="425" y="24" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1587902279297" />
     <state width="406" height="466" key="DebuggerActiveHint" timestamp="1587064747555">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="406" height="466" key="DebuggerActiveHint/0.0.1600.860@0.0.1600.860" timestamp="1587064747555" />
-    <state width="1557" height="244" key="GridCell.Tab.0.bottom" timestamp="1587902219339">
+    <state width="1557" height="244" key="GridCell.Tab.0.bottom" timestamp="1587908403139">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="244" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587902219339" />
-    <state width="1557" height="244" key="GridCell.Tab.0.center" timestamp="1587902219338">
+    <state width="1557" height="244" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587908403139" />
+    <state width="1557" height="244" key="GridCell.Tab.0.center" timestamp="1587908403139">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="244" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587902219338" />
-    <state width="1557" height="244" key="GridCell.Tab.0.left" timestamp="1587902219338">
+    <state width="1557" height="244" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587908403139" />
+    <state width="1557" height="244" key="GridCell.Tab.0.left" timestamp="1587908403138">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="244" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587902219338" />
-    <state width="1557" height="244" key="GridCell.Tab.0.right" timestamp="1587902219339">
+    <state width="1557" height="244" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587908403138" />
+    <state width="1557" height="244" key="GridCell.Tab.0.right" timestamp="1587908403139">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="244" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587902219339" />
-    <state width="1557" height="275" key="GridCell.Tab.1.bottom" timestamp="1587832651154">
+    <state width="1557" height="244" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587908403139" />
+    <state width="1557" height="275" key="GridCell.Tab.1.bottom" timestamp="1587906827324">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587832651154" />
-    <state width="1557" height="275" key="GridCell.Tab.1.center" timestamp="1587832651154">
+    <state width="1557" height="275" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587906827324" />
+    <state width="1557" height="275" key="GridCell.Tab.1.center" timestamp="1587906827324">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1587832651154" />
-    <state width="1557" height="275" key="GridCell.Tab.1.left" timestamp="1587832651154">
+    <state width="1557" height="275" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1587906827324" />
+    <state width="1557" height="275" key="GridCell.Tab.1.left" timestamp="1587906827324">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1587832651154" />
-    <state width="1557" height="275" key="GridCell.Tab.1.right" timestamp="1587832651154">
+    <state width="1557" height="275" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1587906827324" />
+    <state width="1557" height="275" key="GridCell.Tab.1.right" timestamp="1587906827324">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="275" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1587832651154" />
+    <state width="1557" height="275" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1587906827324" />
     <state x="582" y="141" key="RollbackChangesDialog" timestamp="1587820946821">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -434,9 +445,9 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1587587441157" />
-    <state x="465" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1587838305239">
+    <state x="465" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1587906590941">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="465" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1587838305239" />
+    <state x="465" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1587906590941" />
   </component>
 </project>

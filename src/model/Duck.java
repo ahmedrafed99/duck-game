@@ -15,6 +15,7 @@ public class Duck extends GameObject {
         super(name, x, y);
         setScale(0.08);
         this.setImage("psyduck.png");
+        setWeight(500);
     }
 
     public void eat(WaterLily lily) {

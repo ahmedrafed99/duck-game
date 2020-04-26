@@ -1,14 +1,9 @@
+import model.*;
 import physics.Collision;
 import physics.Rectangle;
-import model.Duck;
-import model.GameObject;
-import model.Rock;
-import model.WaterLily;
 import task.DuckWeightDecreaserTask;
 import task.NavigatorTask;
 import view.UI;
-import static logic.Maths.*;
-
 import java.io.IOException;
 import java.util.*;
 import java.util.List;
@@ -23,13 +18,11 @@ public class Game implements Runnable {
     private List<GameObject> gameObjects;
     private UI userInterface;
 
-
     public Game(String title, int width, int height){
         this.title = title;
         this.timer = new Timer();
         this.gameObjects = new ArrayList<>();
         this.userInterface = new UI(title, width, height);
-
         deployUnits();
     }
 
@@ -47,38 +40,21 @@ public class Game implements Runnable {
 
     public void generateRandomDucks(int amount) {
         for (int i=0; i<amount; i++) {
-            Duck duck = new Duck("duck"+i, 0, 0);
-            double xCoor = getRandomNumberInRange(0, getWidth() - duck.getWidth());
-            double yCoor = getRandomNumberInRange(0, getHeight() - duck.getHeight());
-            duck.setX(xCoor);
-            duck.setY(yCoor);
-            duck.setWeight(500);
-            duck.setVisible(true);
+            Duck duck =  GameObjectFactory.generateDuck("Duck" + i, new Rectangle(getWidth(), getHeight()));
             this.gameObjects.add(duck);
         }
     }
 
     public void generateRandomLillies(int amount){
         for (int i=0; i<amount; i++) {
-            WaterLily lily = new WaterLily("lily"+i, 0, 0);
-            double xCoor = getRandomNumberInRange(0, getWidth() - lily.getWidth());
-            double yCoor = getRandomNumberInRange(0, getHeight() - lily.getHeight());
-            lily.setX(xCoor);
-            lily.setY(yCoor);
-            lily.setAlive(true);
-            lily.setVisible(true);
+            WaterLily lily = GameObjectFactory.generateWaterLily("Lily" + i, new Rectangle(getWidth(), getHeight()));
             this.gameObjects.add(lily);
         }
     }
 
     public void generateRandomRocks(int amount) {
         for (int i=0; i<amount; i++) {
-            Rock rock = new Rock("rock"+i, 0, 0);
-            double xCoor = getRandomNumberInRange(0, getWidth() - rock.getWidth());
-            double yCoor = getRandomNumberInRange(0, getHeight() - rock.getHeight());
-            rock.setX(xCoor);
-            rock.setY(yCoor);
-            rock.setVisible(true);
+            Rock rock = GameObjectFactory.generateRock("Rock" + i, new Rectangle(getWidth(), getHeight()));
             this.gameObjects.add(rock);
         }
     }
@@ -119,12 +95,13 @@ public class Game implements Runnable {
     }
 
     public void update() {
-        List<Collision> collisions = this.detectCollisions();
+        List<Collision> collisions = Collision.detectCollisions(this.getDucks(), this.gameObjects);
         for (Collision collision: collisions) {
             GameObject otherObject = collision.getOtherGameObject();
             if (otherObject instanceof WaterLily) {
                 kill(otherObject);
                 collision.getDuck().eat((WaterLily) otherObject);
+                generateRandomLillies(1);
             }
             else if (otherObject instanceof Rock) {
                 // TODO: handle collision with rock
@@ -133,38 +110,12 @@ public class Game implements Runnable {
                 // TODO: handle collision with other duck
             }
         }
-
-//        lilies = getLilies();
-//        for (WaterLily lily: lilies){
-//            if (lily.isAlive()){
-//                return;
-//            } else {
-//                generateRandomLillies(1);
-//            }
-//        }
     }
 
     public synchronized void stop() throws InterruptedException {
         if (!running)
             return;
         thread.join();
-    }
-
-    public List<Collision> detectCollisions() {
-        List<Collision> collisions = new ArrayList<>();
-        for (Duck duck: this.getDucks()) {
-            for (GameObject gameObject: this.gameObjects) {
-                if (gameObject.equals(duck)) {
-                    continue;
-                }
-
-                if (duck.collidesWith(gameObject)) {
-                    collisions.add(new Collision(duck, gameObject));
-                }
-            }
-        }
-
-        return collisions;
     }
 
     @Override
@@ -187,37 +138,22 @@ public class Game implements Runnable {
         }
     }
 
-    public List<Duck> getDucks() {
-        List<Duck> ducks = new ArrayList<>();
-        for (GameObject gameObject: gameObjects) {
-            if (gameObject instanceof Duck) {
-                ducks.add((Duck) gameObject);
-            }
-        }
+    public List getGameObjectsOfType(Class<?> type) {
+        return gameObjects.stream()
+                .filter(obj -> obj.getClass().equals(type))
+                .collect(Collectors.toList());
+    }
 
-        return ducks;
+    public List<Duck> getDucks() {
+        return getGameObjectsOfType(Duck.class);
     }
 
     public List<WaterLily> getLilies() {
-        List<WaterLily> lillies = new ArrayList<>();
-        for (GameObject gameObject: gameObjects) {
-            if (gameObject instanceof WaterLily) {
-                lillies.add((WaterLily) gameObject);
-            }
-        }
-
-        return lillies;
+        return getGameObjectsOfType(WaterLily.class);
     }
 
     public List<Rock> getRocks() {
-        List<Rock> rocks = new ArrayList<>();
-        for (GameObject gameObject: gameObjects) {
-            if (gameObject instanceof Rock) {
-                rocks.add((Rock) gameObject);
-            }
-        }
-
-        return rocks;
+        return getGameObjectsOfType(Rock.class);
     }
 
     public int getWidth() {
