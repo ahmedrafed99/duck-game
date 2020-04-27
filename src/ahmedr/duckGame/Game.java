@@ -38,8 +38,8 @@ public class Game implements Runnable {
     }
 
     public void deployUnits() {
-        generateRandomDucks(3);
-        generateRandomRocks(10);
+        generateRandomDucks(15);
+        generateRandomRocks(4);
         generateRandomLillies(5);
     }
 
@@ -101,27 +101,21 @@ public class Game implements Runnable {
     }
 
     public void update() {
-        List<Collision> collisions = Collision.detectCollisions(this.getDucks(), this.gameObjects);
-        for (Collision collision: collisions) {
-            GameObject otherObject = collision.getOtherGameObject();
-            if (otherObject instanceof WaterLily) {
-                kill(otherObject);
-                collision.getDuck().eat((WaterLily) otherObject);
-                generateRandomLillies(1);
-            }
-            else if (otherObject instanceof Rock) {
-                // TODO: handle collision with rock
-
-            }
-            else if (otherObject instanceof Duck) {
-                // TODO: handle collision with other duck
-            }
-        }
+//        List<Collision> collisions = Collision.detectCollisions(this.getDucks(), this.gameObjects);
+//        for (Collision collision: collisions) {
+//            GameObject otherObject = collision.getOtherGameObject();
+//            if (otherObject instanceof WaterLily) {
+//                kill(otherObject);
+//                collision.getDuck().eat((WaterLily) otherObject);
+//                generateRandomLillies(1);
+//            }
+//        }
     }
 
-    public boolean isSlotWalkable(Rectangle slot) {
+    public boolean duckCanWalkTo(Duck duck, Rectangle slot) {
         for (GameObject gameObject: gameObjects) {
-            if (gameObject instanceof Rock && gameObject.getBounds().intersects(slot) ) {
+            boolean isCollidable = gameObject instanceof Rock || (gameObject instanceof Duck && !gameObject.equals(duck));
+            if (isCollidable && gameObject.getBounds().intersects(slot) ) {
                 return false;
             }
         }
@@ -183,6 +177,15 @@ public class Game implements Runnable {
 
     public void setDimensions(int width, int height) {
         this.userInterface.setDimensions(width, height);
+    }
+
+    public List<GameObject> getGameObjects() {
+        return gameObjects;
+    }
+
+    public void onDuckCollidedWithWaterLilly(Duck duck, WaterLily lilly) {
+        duck.eat(lilly);
+        kill(lilly);
     }
 }
 

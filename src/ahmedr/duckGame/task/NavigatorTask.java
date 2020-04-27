@@ -1,6 +1,10 @@
 package ahmedr.duckGame.task;
 
 import ahmedr.duckGame.Game;
+import ahmedr.duckGame.model.GameObject;
+import ahmedr.duckGame.model.Rock;
+import ahmedr.duckGame.model.WaterLily;
+import ahmedr.duckGame.physics.Collision;
 import ahmedr.duckGame.physics.Point;
 import ahmedr.duckGame.model.Duck;
 import ahmedr.duckGame.physics.Navigation;
@@ -31,13 +35,22 @@ public class NavigatorTask extends TimerTask {
     @Override
     public void run() {
         if (path.size() > 0) {
-            Point nextStep = path.remove(0);
+            Point nextStep = path.remove(0); // Remove point from path even if collision occurs
             Rectangle nextSlot = duck.getBounds();
             nextSlot.translate(nextStep.x, nextStep.y);
-            if (Game.getInstance().isSlotWalkable(nextSlot)) { // when it's not walkable, the first "if" statement will be reexecuted,
-                                                                 // and the step will be removed, this will repeat until the path becomes null,
-                                                                // and therefore the "else" statement will be executed and a new path will be generated.
+            Game game = Game.getInstance();
+            List<GameObject> objectsDuckWillHit = Collision.predictCollisions(duck, nextSlot);
+            if (objectsDuckWillHit.size() == 0) {
                 duck.moveByStep(nextStep);
+            }
+            else {
+                for (GameObject objectDuckWillHit: objectsDuckWillHit) {
+                    if (objectDuckWillHit instanceof WaterLily) {
+                        WaterLily lilly = (WaterLily) objectDuckWillHit;
+                        game.onDuckCollidedWithWaterLilly(duck, lilly);
+                        duck.moveByStep(nextStep);
+                    }
+                }
             }
         }
         else {

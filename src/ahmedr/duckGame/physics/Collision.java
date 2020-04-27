@@ -1,5 +1,6 @@
 package ahmedr.duckGame.physics;
 
+import ahmedr.duckGame.Game;
 import ahmedr.duckGame.model.Duck;
 import ahmedr.duckGame.model.GameObject;
 
@@ -23,20 +24,18 @@ public class Collision {
         return otherObject;
     }
 
-    public static List<Collision> detectCollisions(List<Duck> ducks, List<GameObject> gameObjects) {
-        List<Collision> collisions = new ArrayList<>();
-        for (Duck duck: ducks) {
-            for (GameObject gameObject: gameObjects) {
-                if (gameObject.equals(duck)) {
-                    continue;
-                }
+    public static List<GameObject> predictCollisions(Duck duck, Rectangle nextSlot) {
+        List<GameObject> collidedGameObjects = new ArrayList<>();
+        for (GameObject gameObject: Game.getInstance().getGameObjects()) {
+            if (gameObject.equals(duck)) {
+                continue;
+            }
 
-                if (duck.collidesWith(gameObject)) {
-                    collisions.add(new Collision(duck, gameObject));
-                }
+            if (gameObject.collidesWith(nextSlot)) {
+                collidedGameObjects.add(gameObject);
             }
         }
 
-        return collisions;
+        return collidedGameObjects;
     }
 }

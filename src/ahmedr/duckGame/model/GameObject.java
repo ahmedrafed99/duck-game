@@ -138,6 +138,10 @@ public abstract class GameObject {
         return getBounds().intersects(gameObject.getBounds());
     }
 
+    public boolean collidesWith(Rectangle bounds) {
+        return getBounds().intersects(bounds);
+    }
+
     public boolean isDynamic() {
         return false;
     }
